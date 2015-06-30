@@ -26,7 +26,7 @@
     ================================================== -->
     <link href="../static/css/owl.carousel.css" rel="stylesheet" media="screen">
     <link href="../static/css/owl.theme.css" rel="stylesheet" media="screen">
-    <!-- <link href="../static/css/js-image-slider.css" rel="stylesheet" media="screen"> -->
+    <link href="../static/css/jquery.bxslider.css" rel="stylesheet" />
 
     <!-- Stylesheet
     ================================================== -->
@@ -75,16 +75,15 @@
     <!-- About Page
     ==========================================-->
     <div id="tf-about" class="text-center">
-        <div id="slider">
-            <img src="../static/photos/1.jpg" style="width:500px; height:auto;">
-            <img src="../static/photos/2.jpg" style="width:500px; height:auto;">
-            <img src="../static/photos/3.jpg" style="width:500px; height:auto;">
-            <img src="../static/photos/4.jpg">
-            <img src="../static/photos/5.jpg">
-            <img src="../static/photos/6.jpg">
-            <img src="../static/photos/7.jpg">
-            <img src="../static/photos/8.jpg">
-            <img src="../static/photos/9.jpg">
+        <div id="sliderbox">
+            <ul class="bxslider">
+                <li><img src="../static/photos/1.jpg"></li>
+                <li><img src="../static/photos/2.jpg"></li>
+                <li><img src="../static/photos/3.jpg"></li>
+                <li><img src="../static/photos/4.jpg"></li>
+                <li><img src="../static/photos/5.jpg"></li>
+                <li><img src="../static/photos/6.jpg"></li>
+            </ul>
         </div>
         <div class="overlay">
             <div class="content">
@@ -332,7 +331,7 @@
     <script type="text/javascript" src="../static/js/jquery.isotope.js"></script>
 
     <script src="../static/js/owl.carousel.js"></script>
-    <script src="../static/js/js-image-slider.js"></script>
+    <script src="../static/js/jquery.bxslider.min.js"></script>
 
     <!-- Javascripts
     ================================================== -->

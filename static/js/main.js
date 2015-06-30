@@ -38,6 +38,16 @@ function main() {
     })
 
   	$(document).ready(function() {
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        auto: true,
+        speed: 2000,
+        easing: 'ease-in-out',
+        controls: false,
+        pause: 5000,
+        pager: false
+      });
+
   	  $("#team").owlCarousel({
   	 
   	      navigation : false, // Show next and prev buttons
