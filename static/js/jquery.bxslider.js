@@ -109,6 +109,8 @@
 		// first get the original window dimens (thanks alot IE)
 		var windowWidth = $(window).width();
 		var windowHeight = $(window).height();
+		var $sliderImg = $(".bxslider img");
+		var imgRatio = 1.5;
 
 
 
@@ -234,7 +236,11 @@
 				slider.children.css({
 					position: 'absolute',
 					zIndex: 0,
-					display: 'none'
+					display: 'none',
+					top: (windowHeight-$sliderImg.height())/2+"px"
+					//"text-align": "center",
+					//margin-top: -sliderImg.height()/2+"px",
+					//"margin-left": -$sliderImg.width()/2+"px"
 				});
 				// prepare the z-index on the showing element
 				slider.children.eq(slider.settings.startSlide).css({zIndex: slider.settings.slideZIndex, display: 'block'});
@@ -370,6 +376,13 @@
 				}).get());
 			}
 
+			// ADDED
+			if(windowWidth/(windowHeight*0.87) > imgRatio){
+				height = windowWidth/imgRatio;
+			}else{
+				height = (windowHeight*0.87);
+			}
+
 			if(slider.viewport.css('box-sizing') == 'border-box'){
 				height +=	parseFloat(slider.viewport.css('padding-top')) + parseFloat(slider.viewport.css('padding-bottom')) +
 							parseFloat(slider.viewport.css('border-top-width')) + parseFloat(slider.viewport.css('border-bottom-width'));
@@ -403,19 +416,25 @@
 			var newElWidth = slider.settings.slideWidth;
 			// get the current viewport width
 			var wrapWidth = slider.viewport.width();
+			var wrapHeight = slider.viewport.height();
 			// if slide width was not supplied, or is larger than the viewport use the viewport width
-			if(slider.settings.slideWidth == 0 ||
-				(slider.settings.slideWidth > wrapWidth && !slider.carousel) ||
-				slider.settings.mode == 'vertical'){
+			// if(slider.settings.slideWidth == 0 ||
+			// 	(slider.settings.slideWidth > wrapWidth && !slider.carousel) ||
+			// 	slider.settings.mode == 'vertical'){
+			// 	newElWidth = wrapWidth;
+			// ADDED
+			if(windowWidth/(windowHeight*0.87) > imgRatio){
 				newElWidth = wrapWidth;
+			}else if(windowWidth/(windowHeight*0.87) <= imgRatio) {
+				newElWidth = wrapHeight*imgRatio;
 			// if carousel, use the thresholds to determine the width
-			}else if(slider.settings.maxSlides > 1 && slider.settings.mode == 'horizontal'){
-				if(wrapWidth > slider.maxThreshold){
-					// newElWidth = (wrapWidth - (slider.settings.slideMargin * (slider.settings.maxSlides - 1))) / slider.settings.maxSlides;
-				}else if(wrapWidth < slider.minThreshold){
-					newElWidth = (wrapWidth - (slider.settings.slideMargin * (slider.settings.minSlides - 1))) / slider.settings.minSlides;
-				}
-			}
+			}//else if(slider.settings.maxSlides > 1 && slider.settings.mode == 'horizontal'){
+			// 	if(wrapWidth > slider.maxThreshold){
+			// 		// newElWidth = (wrapWidth - (slider.settings.slideMargin * (slider.settings.maxSlides - 1))) / slider.settings.maxSlides;
+			// 	}else if(wrapWidth < slider.minThreshold){
+			// 		newElWidth = (wrapWidth - (slider.settings.slideMargin * (slider.settings.minSlides - 1))) / slider.settings.minSlides;
+			// 	}
+			// }
 			return newElWidth;
 		}
 
@@ -1284,10 +1303,24 @@
 		 * Update all dynamic slider elements
 		 */
 		el.redrawSlider = function(){
-			// resize all children in ratio to new screen size
-			slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
 			// adjust the height
 			slider.viewport.css('height', getViewportHeight());
+			// resize all children in ratio to new screen size
+			slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
+			// ADDED
+			if(windowWidth/(windowHeight*0.87) > imgRatio){
+				// slider.children.css('top', (windowHeight*0.87-$sliderImg.height())/2);
+				// slider.children.css('left', 0);
+				slider.children.css({'top': (windowHeight*0.87-$sliderImg.height())/2,
+									'left': '0px'
+				});
+			}else{
+				// slider.children.css('top', 0);
+				// slider.children.css('left', (windowWidth-$sliderImg.width())/2);
+				slider.children.css({'top': '0px',
+									'left': (windowWidth-$sliderImg.width())/2
+				});
+			}
 			// update the slide position
 			if(!slider.settings.ticker) setSlidePosition();
 			// if active.last was true before the screen resize, we want
@@ -1300,6 +1333,7 @@
 				populatePager();
 				updatePagerActive(slider.active.index);
 			}
+			//alert($sliderImg.height()+", "+windowHeight*0.87);
 		}
 
 		/**
