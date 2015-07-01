@@ -6,6 +6,7 @@ body, html{
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #5a5a5a;
+	height:100%;
 }
 
 h1{
@@ -119,12 +120,16 @@ font-weight: 900;
 
 /* Home Style */
 #tf-about{
+	position:relative;
 	/*background: url(../photos/DSC_5632.jpg);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;*/
 	color: #cfcfcf;
+	height:83%;
+	width:100%;
+	min-height: 500px;
 }
 
 #tf-about .overlay{
@@ -135,20 +140,33 @@ font-weight: 900;
 	background: -ms-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
-	height: 750px;
+	height:100%;
 	background-attachment: fixed;
+	position: relative;
+	z-index: 1;
 }
 #tf-about p.lead{
 	color: #e3e3e3;
 }
 
 #sliderbox {
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
-	height:750px;
+	height:100%;
 	width:100%;
+	z-index: 0;
 }
+/*.bxslider img{
+	margin: auto; 
+	height:auto;
+	width:auto;
+}*/
+/*@media screen and (max-width: 3840px) {
+  .bxslider img {
+    left: 50%;
+    margin-left: -1920px;
+}*/
 
 .content{
 	position: relative;
@@ -177,6 +195,7 @@ a.fa.fa-angle-down:hover{
 /* Portfolio Section 
 ==============================*/
 #tf-portfolio{
+	position: relative;
 	padding: 80px 0;
 	background-color: #ffffff;
 	z-index: 1000;
