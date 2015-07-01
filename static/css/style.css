@@ -72,6 +72,7 @@ ul, ol{
 	moz-padding: 0;
 }
 
+/* TODO: fix inertial scrolling in Safari */
 #scrollspacer {
 	content: " ";
 	position:absolute;
@@ -159,6 +160,7 @@ font-weight: 900;
 	color: #e3e3e3;
 }
 
+/* TODO: fix resizing in Chrome */
 #sliderbox {
 	position:absolute;
 	top:0;
