@@ -109,9 +109,9 @@
 		// first get the original window dimens (thanks alot IE)
 		var windowWidth = $(window).width();
 		var windowHeight = $(window).height();
-		var $sliderImg = $(".bxslider img");
+		var $sliderImg = $(".bxslider li");
 		var imgRatio = 1.5;
-
+		var sliderHeight = $('#tf-about').height()/windowHeight;
 
 
 		/**
@@ -377,10 +377,10 @@
 			}
 
 			// ADDED
-			if(windowWidth/(windowHeight*0.87) > imgRatio){
+			if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
 				height = windowWidth/imgRatio;
 			}else{
-				height = (windowHeight*0.87);
+				height = (windowHeight*sliderHeight);
 			}
 
 			if(slider.viewport.css('box-sizing') == 'border-box'){
@@ -423,9 +423,9 @@
 			// 	slider.settings.mode == 'vertical'){
 			// 	newElWidth = wrapWidth;
 			// ADDED
-			if(windowWidth/(windowHeight*0.87) > imgRatio){
+			if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
 				newElWidth = wrapWidth;
-			}else if(windowWidth/(windowHeight*0.87) <= imgRatio) {
+			}else if(windowWidth/(windowHeight*sliderHeight) <= imgRatio) {
 				newElWidth = wrapHeight*imgRatio;
 			// if carousel, use the thresholds to determine the width
 			}//else if(slider.settings.maxSlides > 1 && slider.settings.mode == 'horizontal'){
@@ -1308,10 +1308,10 @@
 			// resize all children in ratio to new screen size
 			slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
 			// ADDED
-			if(windowWidth/(windowHeight*0.87) > imgRatio){
-				// slider.children.css('top', (windowHeight*0.87-$sliderImg.height())/2);
+			if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
+				// slider.children.css('top', (windowHeight*sliderHeight-$sliderImg.height())/2);
 				// slider.children.css('left', 0);
-				slider.children.css({'top': (windowHeight*0.87-$sliderImg.height())/2,
+				slider.children.css({'top': (windowHeight*sliderHeight-$sliderImg.height())/2,
 									'left': '0px'
 				});
 			}else{
@@ -1333,7 +1333,7 @@
 				populatePager();
 				updatePagerActive(slider.active.index);
 			}
-			//alert($sliderImg.height()+", "+windowHeight*0.87);
+			// alert($sliderImg.width()+"x"+$sliderImg.height());
 		}
 
 		/**

@@ -141,7 +141,7 @@ font-weight: 900;
 	background-attachment: fixed;
 	background-repeat: no-repeat;*/
 	color: #cfcfcf;
-	height:87%; /*83*/
+	height:90%; /*83*/
 	width:100%;
 	min-height: 500px;
 }
@@ -191,7 +191,7 @@ font-weight: 900;
 	position:fixed;
 	top: 0;
   	left: 0;
-	height:87%; /*83*/
+	height:90%; /*83*/
 	width:100%;
 	display:block;
 	-webkit-backface-visibility: hidden;
