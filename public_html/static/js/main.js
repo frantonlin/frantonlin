@@ -41,10 +41,10 @@ function main() {
       $('.bxslider').bxSlider({
         mode: 'fade',
         auto: true,
-        speed: 2000,
+        speed: 2500,
         easing: 'ease-in-out',
         controls: false,
-        pause: 5000,
+        pause: 13000,
         pager: false,
         captions: true
       });
