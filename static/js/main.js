@@ -24,7 +24,7 @@ function main() {
     Show Menu on Book
     ======================================*/
     $(window).bind('scroll', function() {
-        var navHeight = $(window).height() - 100;
+        var navHeight = $(window).height()*0.72; // Where the navigation bar changes
         if ($(window).scrollTop() > navHeight) {
             $('.navbar-default').addClass('on');
         } else {
@@ -45,7 +45,8 @@ function main() {
         easing: 'ease-in-out',
         controls: false,
         pause: 5000,
-        pager: false
+        pager: false,
+        captions: true
       });
 
   	  $("#team").owlCarousel({

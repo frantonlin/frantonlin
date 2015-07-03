@@ -1314,11 +1314,17 @@
 				slider.children.css({'top': (windowHeight*sliderHeight-$sliderImg.height())/2,
 									'left': '0px'
 				});
+				$('.bx-caption').css({'bottom': ($sliderImg.height()-windowHeight*sliderHeight)/2,
+									'left': '0px'
+				});
 			}else{
 				// slider.children.css('top', 0);
 				// slider.children.css('left', (windowWidth-$sliderImg.width())/2);
 				slider.children.css({'top': '0px',
 									'left': (windowWidth-$sliderImg.width())/2
+				});
+				$('.bx-caption').css({'bottom': '0px',
+									'left': ($sliderImg.width()-windowWidth)/2
 				});
 			}
 			// update the slide position
