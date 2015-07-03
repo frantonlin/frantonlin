@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 
+/* Highlight color used to be #FCAC45 */
+
 body, html{
 	font-family: 'Lato', sans-serif;
 	text-rendering: optimizeLegibility !important;
@@ -14,6 +16,9 @@ body, html{
 
 h1{
 	text-transform: uppercase;
+	font-size:50px;
+	margin-bottom:20px;
+	display: block;
 }
 h1 strong{
 	font-weight: 900;
@@ -44,15 +49,15 @@ p.intro{
 	line-height: 24px;
 	font-family: 'Open Sans', sans-serif;
 }
-a{ color: #FCAC45;}
+a{ color: #FFCC00;}
 a:hover,
 a:focus{
 	text-decoration: none;
-	color: #FCAC45;
+	color: #FFCC00;
 }
 
 .section-title hr{
-	border-color: #fcac45;
+	border-color: #FFCC00;
 	border-width: 4px;
 	width: 60px;
 	float: left;
@@ -96,10 +101,14 @@ ul, ol{
 	border-color: rgba(231, 231, 231, 0);
 }
 #tf-menu a.navbar-brand {
-text-transform: uppercase;
-font-size: 22px;
-color: #fff;
-font-weight: 900;
+	position:relative;
+	text-transform: uppercase;
+	font-size: 22px;
+	color: #fff;
+	font-weight: 900;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.8s;
 }
 
 #tf-menu.navbar-default .navbar-nav > li > a {
@@ -115,7 +124,7 @@ font-weight: 900;
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-	color: #FCAC45 !important;
+	color: #FFCC00 !important;
 	background-color: transparent;
 	font-weight: 700;
 }
@@ -125,8 +134,8 @@ font-weight: 900;
 	}
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
-	background-color: #FCAC45;
-	border-color: #FCAC45;
+	background-color: #FFCC00;
+	border-color: #FFCC00;
 	}
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
@@ -135,7 +144,7 @@ font-weight: 900;
 /* Home Style */
 #tf-about{
 	position:relative;
-	color: #cfcfcf;
+	color: #f0f0f0;
 	height:90%; /*83*/
 	width:100%;
 	min-height: 300px;
@@ -155,7 +164,12 @@ font-weight: 900;
 	z-index: 51;
 }
 #tf-about p.lead{
-	color: #e3e3e3;
+	text-transform: uppercase;
+	margin:0px;
+	color: rgba(255,255,255,0.6);
+	font-size:16px;
+	font-weight:500;
+	letter-spacing: 0.2em;
 }
 
 #sliderbox {
@@ -182,19 +196,67 @@ font-weight: 900;
 	text-align: center;
 }
 
-#floater-top {
-    float: left;
-    height: 50%;
-    width: 100%;
-    margin-bottom: -50px;
+#tf-about .avatar {
+	position: absolute;
+    top: 50%;
+    margin-top: -84px;
+	display: block;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	vertical-align: middle;
+	float:left;
 }
+#tf-about .text {
+	position:relative;
+	margin-left:105px;
+	display:block;
+}
+
 .content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -55%);
+	-moz-transform:    translate(-50%, -55%);
+	-ms-transform:     translate(-50%, -55%);
+	-o-transform:      translate(-50%, -55%);
+	transform:         translate(-50%, -55%);
+	padding: 10% 5%;
+}
+ul.social {
 	position: relative;
-	padding: 10% 0;
+	left:-5px;
+}
+ul.social li{
+	display: inline-block;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+ul.social li.last{
+	margin-right:0;
+}
+#tf-about i.fa {
+	/*height: 26px;
+	width: 26px;*/
+	/*border: 2px solid #8c8c8c;*/
+	font-size: 28px;
+	padding: 4px 5px;
+	/*border-radius: 30%;*/
+	color: rgba(255,255,255,0.9);
+	transition: all 0.5s;
+}
+#tf-about i.fa:hover{
+	color: rgba(255,255,255,1);;
+	-webkit-transform: scale(1.1);
+	-moz-transform:    scale(1.1);
+	-ms-transform:     scale(1.1);
+	-o-transform:      scale(1.1);
+	transform:         scale(1.1);
 }
 
 .color{
-	color: #fcac45;
+	color: #FFCC00;
 }
 
 a.fa.fa-angle-down {
@@ -207,9 +269,9 @@ a.fa.fa-angle-down {
 	transition: all 0.5s;
 }
 a.fa.fa-angle-down:hover{
-	background: #fcac45;
+	background: #FFCC00;
 	color: #ffffff;
-	border: 2px solid #fcac45;
+	border: 2px solid #FFCC00;
 }
 
 /* Portfolio Section 
@@ -319,11 +381,11 @@ ol.type li a.active { font-weight: 700; }
 #tf-works i.fa {
 	height: 30px;
 	width: 30px;
-	border: 1px solid #FCAC45;
+	border: 1px solid #FFCC00;
 	font-size: 20px;
 	padding: 5px;
 	border-radius: 50%;
-	color: #FCAC45;
+	color: #FFCC00;
 }
 
 /* Contact Section */
@@ -367,7 +429,7 @@ label {
 
 button.btn.tf-btn.btn-default {
 	float: right;
-	background: #FCAC45;
+	background: #FFCC00;
 	border: 0;
 	border-radius: 0;
 	padding: 10px 40px;
@@ -420,7 +482,7 @@ nav#footer p{
 	transition: all 0.5s;
 }
 #footer i.fa:hover{
-	background: #FCAC45;
-	border-color: #FCAC45;
+	background: #FFCC00;
+	border-color: #FFCC00;
 	color: #ffffff;
 }

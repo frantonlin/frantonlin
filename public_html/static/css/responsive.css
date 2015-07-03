@@ -1,8 +1,9 @@
-@media (max-width: 768px){
+/*768*/
+/*@media (max-width: 1024px){
   .content {
 	padding: 40% 0 0;
 	}
-}
+}*/
 
 @media (max-width: 603px){
 #tf-menu.navbar-default {

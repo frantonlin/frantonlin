@@ -27,8 +27,10 @@ function main() {
         var navHeight = $(window).height()*0.70; // Where the navigation bar changes
         if ($(window).scrollTop() > navHeight) {
             $('.navbar-default').addClass('on');
+            $('#tf-menu a.navbar-brand').css({'opacity':1,'z-index':0});
         } else {
             $('.navbar-default').removeClass('on');
+            $('#tf-menu a.navbar-brand').css({'opacity':0,'z-index':-1});
         }
     });
 
