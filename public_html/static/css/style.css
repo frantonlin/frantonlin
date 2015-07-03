@@ -76,7 +76,7 @@ ul, ol{
 }
 
 /* TODO: fix inertial scrolling in Safari */
-#scrollspacer {
+#topscrollspacer {
 	content: " ";
 	position:absolute;
 	top:-300px;
@@ -423,3 +423,14 @@ nav#footer p{
 	background: #FCAC45;
 	border-color: #FCAC45;
 	color: #ffffff;
+}
+
+#bottomscrollspacer {
+	content: " ";
+	position:absolute;
+	/*top:-300px;*/
+	height:300px;
+	width:100%;
+	background-color: #fff;
+	z-index:1;
+}
