@@ -110,6 +110,14 @@ ul, ol{
 	z-index: -1;
 	transition: all 0.8s;
 }
+#tf-menu .avatar {
+	position:absolute;
+	margin-left: 15px;
+    width:50px;
+    height:50px;
+    opacity:0;
+    transition: all 0.8s;
+}
 
 #tf-menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
@@ -193,15 +201,16 @@ ul, ol{
 	text-align: center;
 }
 
-#tf-about .avatar {
+.avatar {
 	position: absolute;
-    top: 50%;
-    margin-top: -84px;
 	display: block;
 	border-radius: 50%;
+}
+#tf-about .avatar {
+    top: 50%;
+    margin-top: -84px;
 	width: 90px;
 	height: 90px;
-	vertical-align: middle;
 	float:left;
 }
 #tf-about .text {
@@ -213,7 +222,7 @@ ul, ol{
 .content{
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 41%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform:    translate(-50%, -50%);
 	-ms-transform:     translate(-50%, -50%);

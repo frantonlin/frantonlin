@@ -25,17 +25,19 @@ function main() {
     ======================================*/
     $(window).bind('scroll', function() {
         var navHeight = $(window).height()*0.70; // Where the navigation bar changes
-        if ($(window).width() > 494) {
+        if ($(window).width() <= 494) {
           if ($(window).scrollTop() > navHeight) {
-            $('#tf-menu a.navbar-brand').css({'opacity':1,'z-index':0});
+            $('#tf-menu .avatar').css({'opacity':0,'z-index':-1});
           } else {
-            $('#tf-menu a.navbar-brand').css({'opacity':0,'z-index':-1});
+            $('#tf-menu .avatar').css({'opacity':1,'z-index':0});
           }
         }
         if ($(window).scrollTop() > navHeight) {
           $('.navbar-default').addClass('on');
+          $('#tf-menu a.navbar-brand').css({'opacity':1,'z-index':0});
         } else {
           $('.navbar-default').removeClass('on');
+          $('#tf-menu a.navbar-brand').css({'opacity':0,'z-index':-1});
         }
     });
 
