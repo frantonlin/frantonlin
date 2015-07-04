@@ -1,4 +1,9 @@
 
+@media (max-width: 880px) {
+    #tf-menu.navbar-default {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+}
 /* tall (mobile portrait) */
 @media (max-width: 494px){
     .content {
@@ -10,9 +15,6 @@
     #tf-menu .navbar-header {
         padding:10px 0;
         transition: all 0.8s;
-    }
-    #tf-menu.navbar-default {
-        background-color: rgba(0, 0, 0, 0.79);
     }
     #tf-menu a.navbar-brand {
         opacity: 1;
@@ -28,7 +30,7 @@
         position:absolute !important;
     }
     .on {
-        background-color: rgba(0, 0, 0, 0.79) !important;
+        background-color: rgba(0, 0, 0, 0.65) !important;
     }
     .on .navbar-header{
         padding: 0 !important;
@@ -39,9 +41,6 @@
 @media (max-height: 420px){
     #tf-menu {
         padding:10px 0;
-    }
-    #tf-menu.navbar-default {
-        background-color: rgba(0, 0, 0, 0.79);
     }
     /*#tf-menu a.navbar-brand {
         opacity: 1;
