@@ -5,22 +5,21 @@
     }
 }
 /* tall (mobile portrait) */
-@media (max-width: 493px) and (orientation: portrait) {
+@media (max-width: 493px) {
     /*.content {
         margin: 30px 0;
 	}*/
     #tf-menu {
-        padding:0;
+        padding:0 !important
     }
     #tf-menu .navbar-header {
         padding:10px 0;
-        transition: all 0.8s;
     }
     #tf-menu .avatar{
-        opacity:1;
+        opacity:1 !important;
     }
     #tf-about .avatar {
-        opacity: 0;
+        opacity: 0 !important;
     }
     #tf-about .text {
         margin-left: 0;
@@ -46,16 +45,16 @@
         text-align: center;
     }
 }
-/*@media (min-width:494px) {
+@media (min-width:494px) {
     #tf-menu .avatar{
-        opacity:0;
+        opacity: 0 !important;
     }
     #tf-about .avatar {
         opacity: 1;
     }
-}*/
+}
 /* wide (mobile landscape) */
-@media (max-height: 420px) and (orientation: landscape) {
+@media (max-height: 420px) {
     #tf-menu {
         padding:10px 0;
     }
