@@ -1306,7 +1306,7 @@
 			// adjust the height
 			slider.viewport.css('height', getViewportHeight());
 			// resize all children in ratio to new screen size ADDED
-			if(windowHeight > 360 || windowWidth > 420){
+			if(windowHeight > 360/0.9 && windowWidth > 420){
 				slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
 
 				if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
