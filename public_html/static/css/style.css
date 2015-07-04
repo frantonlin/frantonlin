@@ -251,6 +251,14 @@ ul.social li.last{
 	-o-transform:      scale(1.1);
 	transform:         scale(1.1);
 }
+#tf-about i.fa-file-text:before {
+	font-size: 24px;
+  	position: relative;
+  	top: -1.4px;
+}
+#tf-about i.fa-envelope:before {
+	font-size: 30.5px;
+}
 
 .color{
 	color: #FFCC00;
@@ -275,7 +283,7 @@ a.fa.fa-angle-down:hover{
 ==============================*/
 #tf-portfolio{
 	position: relative;
-	padding: 80px 0;
+	padding: 55px 0;
 	background-color: #ffffff;
 	z-index: 100;
 }
@@ -387,7 +395,7 @@ ol.type li a.active { font-weight: 700; }
 
 /* Contact Section */
 #tf-contact{
-	padding: 80px 0;
+	padding: 55px 0;
 	background-color: #ffffff;
 	position:relative;
 	z-index: 100;
@@ -461,11 +469,14 @@ nav#footer{
 	z-index:50;
 }
 nav#footer .fnav{ vertical-align: middle;}
+ul.footer-social {
+	margin:0;
+}
 ul.footer-social li{
 	display: inline-block;
 	margin-right: 20px;
 	position: relative;
-	top:5px;
+	top:2px;
 }
 ul.footer-social li.last{
 	margin-right:0;
@@ -475,19 +486,24 @@ nav#footer p{
 	margin-top: 10px;
 }
 #footer i.fa {
-	font-size: 20px;
+	font-size: 22px;
 	padding: 4px 5px;
 	border-radius: 20%;
 	color: #8c8c8c;
 	transition: all 0.5s;
 }
+#footer i.fa-file-text:before {
+	font-size: 19px;
+  	position: relative;
+  	top: -1px;
+}
 #footer i.fa-envelope:before {
+	font-size: 24.5px;
 	position:relative;
-	top:-0.5px;
-	left:-0.5px;
+	top:0px;
 }
 #footer i.fa:hover{
-	background: #FFCC00;
-	border-color: #FFCC00;
+	/*background: #FFCC00;
+	border-color: #FFCC00;*/
 	color: #ffffff;
 }

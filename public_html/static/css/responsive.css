@@ -36,8 +36,7 @@
         padding: 0 !important;
         background-color: #222222;
     }
-    .pull-left.fnav,
-    .pull-right.fnav {
+    .fnav {
         float: none !important;
         text-align: center;
     }
