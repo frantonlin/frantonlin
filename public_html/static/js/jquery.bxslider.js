@@ -1306,8 +1306,9 @@
 			// adjust the height
 			slider.viewport.css('height', getViewportHeight());
 			// resize all children in ratio to new screen size ADDED
-			if(windowHeight > 360/0.9 && windowWidth > 420){
-				slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
+			//if(windowHeight > 360/0.9){// || windowWidth > 420){
+				slider.children.add(el.find('.bx-clone')).width(Math.max(getSlideWidth(),360*imgRatio));
+				if(windowHeight < 360/0.9) {windowHeight=360/0.9;}
 
 				if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
 					slider.children.css({'top': (windowHeight*sliderHeight-$sliderImg.height())/2,
@@ -1324,7 +1325,7 @@
 										'left': ($sliderImg.width()-windowWidth)/2
 					});
 				}
-			}
+			//}
 			// update the slide position
 			if(!slider.settings.ticker) setSlidePosition();
 			// if active.last was true before the screen resize, we want
