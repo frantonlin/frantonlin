@@ -271,7 +271,7 @@ a.fa.fa-angle-down:hover{
 	position: relative;
 	padding: 80px 0;
 	background-color: #ffffff;
-	/*z-index: 10;*/
+	z-index: 100;
 }
 .categories{ 
 	padding: 10px 0;
@@ -384,7 +384,7 @@ ol.type li a.active { font-weight: 700; }
 	padding: 80px 0;
 	background-color: #ffffff;
 	position:relative;
-	/*z-index: 10;*/
+	z-index: 100;
 }
 
 label {
