@@ -36,6 +36,11 @@
         padding: 0 !important;
         background-color: #222222;
     }
+    .pull-left.fnav,
+    .pull-right.fnav {
+        float: none !important;
+        text-align: center;
+    }
 }
 /* wide (mobile landscape) */
 @media (max-height: 420px){
@@ -66,11 +71,6 @@
 
 label{
     float: none !important
-}
-.pull-left.fnav,
-.pull-right.fnav {
-    float: none !important;
-    text-align: center;
 }
 
 .hover-bg .hover-text {

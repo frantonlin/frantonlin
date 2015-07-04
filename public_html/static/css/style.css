@@ -456,7 +456,7 @@ button.btn.tf-btn.btn-default {
 nav#footer{
 	background: #222222;
 	color: #ffffff;
-	padding: 20px 0 15px 0;
+	padding: 13px 0 12px 0;
 	position:relative;
 	z-index:50;
 }
@@ -464,20 +464,31 @@ nav#footer .fnav{ vertical-align: middle;}
 ul.footer-social li{
 	display: inline-block;
 	margin-right: 10px;
+	position: relative;
+	top:5px;
 }
 nav#footer p{
 	font-size: 12px;
 	margin-top: 10px;
 }
+
+/*#tf-about i.fa {
+	font-size: 28px;
+	padding: 4px 5px;
+	color: rgba(255,255,255,0.9);
+	transition: all 0.5s;
+}*/
 #footer i.fa {
-	height: 30px;
-	width: 30px;
-	border: 2px solid #8c8c8c;
 	font-size: 20px;
 	padding: 4px 5px;
-	border-radius: 50%;
+	border-radius: 20%;
 	color: #8c8c8c;
 	transition: all 0.5s;
+}
+#footer i.fa-envelope:before {
+	position:relative;
+	top:-0.5px;
+	left:-0.5px;
 }
 #footer i.fa:hover{
 	background: #FFCC00;
