@@ -16,6 +16,17 @@
         position:absolute !important;
     }
 }
+@media (max-height: 420px){
+    #tf-menu.navbar-default {
+        background-color: rgba(0, 0, 0, 0.79);
+    }
+    #tf-menu {
+        padding:10px;
+    }
+    #sliderbox {
+        position:absolute !important;
+    }
+}
 
 @media (max-width: 350px){
     #tf-about .avatar {
@@ -23,7 +34,7 @@
         height:60px;
     }
     #tf-about .text {
-        margin-left: 75px;
+        margin-left: 70px;
     }
     .avatar {
         margin-top:-69px !important;
