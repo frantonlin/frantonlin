@@ -131,9 +131,13 @@ ul, ol{
 
 .navbar-toggle {
 	border-radius: 0;
+	text-transform: uppercase;
+	color:#888;
+	letter-spacing: 1px;
 	}
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
+	color:#fff;
 	background-color: #FFCC00;
 	border-color: #FFCC00;
 	}
@@ -427,6 +431,7 @@ button.btn.tf-btn.btn-default {
 	padding: 10px 40px;
 	color: #ffffff;
 	text-transform: uppercase;
+	font-size:12px;
 }
 
 .btn:active, .btn.active {
