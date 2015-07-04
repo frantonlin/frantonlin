@@ -25,7 +25,7 @@ function main() {
     ======================================*/
     $(window).bind('scroll', function() {
         var navHeight = $(window).height()*0.70; // Where the navigation bar changes
-        if ($(window).height() > 420 && $(window).width() > 494) {
+        if ($(window).width() > 494) {
           if ($(window).scrollTop() > navHeight) {
             $('#tf-menu a.navbar-brand').css({'opacity':1,'z-index':0});
           } else {
