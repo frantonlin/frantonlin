@@ -463,21 +463,17 @@ nav#footer{
 nav#footer .fnav{ vertical-align: middle;}
 ul.footer-social li{
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 20px;
 	position: relative;
 	top:5px;
+}
+ul.footer-social li.last{
+	margin-right:0;
 }
 nav#footer p{
 	font-size: 12px;
 	margin-top: 10px;
 }
-
-/*#tf-about i.fa {
-	font-size: 28px;
-	padding: 4px 5px;
-	color: rgba(255,255,255,0.9);
-	transition: all 0.5s;
-}*/
 #footer i.fa {
 	font-size: 20px;
 	padding: 4px 5px;
