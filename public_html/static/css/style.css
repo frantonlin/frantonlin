@@ -119,7 +119,7 @@ ul, ol{
     width:50px;
     height:50px;
     opacity:0;
-    transition: all 0.8s;
+    /*transition: all 0.8s;*/
 }
 
 #tf-menu.navbar-default .navbar-nav > li > a {
