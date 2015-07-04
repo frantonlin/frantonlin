@@ -1,23 +1,25 @@
 
 @media (max-width: 494px){
     .content {
-        padding: 30px 0 0;
+        margin: 30px 0;
 	}
     .avatar {
         margin-top: -68px !important;
     }
+    #tf-menu.navbar-default {
+        background-color: rgba(0, 0, 0, 0.79);
+    }
+    #tf-works li.pull-right, #tf-works li.pull-left {
+        margin-top: 10px;
+        float: none !important;
+        text-align: center;
+        display: block;
+    }
+    #sliderbox {
+        position:absolute !important;
+    }
 }
 
-@media (max-width: 494px){
-#tf-menu.navbar-default {
-	background-color: rgba(0, 0, 0, 0.79);
-	}
-#tf-works li.pull-right, #tf-works li.pull-left {
-    margin-top: 10px;
-    float: none !important;
-    text-align: center;
-    display: block;
-}
 label{
     float: none !important
 }

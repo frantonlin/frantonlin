@@ -1305,27 +1305,25 @@
 		el.redrawSlider = function(){
 			// adjust the height
 			slider.viewport.css('height', getViewportHeight());
-			// resize all children in ratio to new screen size
-			slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
-			// ADDED
-			if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
-				// slider.children.css('top', (windowHeight*sliderHeight-$sliderImg.height())/2);
-				// slider.children.css('left', 0);
-				slider.children.css({'top': (windowHeight*sliderHeight-$sliderImg.height())/2,
-									'left': '0px'
-				});
-				$('.bx-caption').css({'bottom': ($sliderImg.height()-windowHeight*sliderHeight)/2,
-									'left': '0px'
-				});
-			}else{
-				// slider.children.css('top', 0);
-				// slider.children.css('left', (windowWidth-$sliderImg.width())/2);
-				slider.children.css({'top': '0px',
-									'left': (windowWidth-$sliderImg.width())/2
-				});
-				$('.bx-caption').css({'bottom': '0px',
-									'left': ($sliderImg.width()-windowWidth)/2
-				});
+			// resize all children in ratio to new screen size ADDED
+			if(windowHeight > 360){
+				slider.children.add(el.find('.bx-clone')).width(getSlideWidth());
+
+				if(windowWidth/(windowHeight*sliderHeight) > imgRatio){
+					slider.children.css({'top': (windowHeight*sliderHeight-$sliderImg.height())/2,
+										'left': '0px'
+					});
+					$('.bx-caption').css({'bottom': ($sliderImg.height()-windowHeight*sliderHeight)/2,
+										'left': '0px'
+					});
+				}else{
+					slider.children.css({'top': '0px',
+										'left': (windowWidth-$sliderImg.width())/2
+					});
+					$('.bx-caption').css({'bottom': '0px',
+										'left': ($sliderImg.width()-windowWidth)/2
+					});
+				}
 			}
 			// update the slide position
 			if(!slider.settings.ticker) setSlidePosition();

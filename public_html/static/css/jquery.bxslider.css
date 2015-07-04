@@ -29,9 +29,9 @@
 /** THEME
 ===================================*/
 
-/*.bx-wrapper .bx-viewport {
-	height:83%;
-}*/
+.bx-wrapper .bx-viewport {
+	min-height:360px;
+}
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {

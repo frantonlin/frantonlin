@@ -147,7 +147,7 @@ ul, ol{
 	color: #f0f0f0;
 	height:90%; /*83*/
 	width:100%;
-	min-height: 300px;
+	min-height: 360px;
 }
 
 #tf-about .overlay{
@@ -179,15 +179,6 @@ ul, ol{
 	height:90%;
 	width:100%;
 	/*display:block;*/
-}
-#fixedbox {
-	position:fixed;
-	top: 0;
-  	left: 0;
-	height:90%; /*83*/
-	width:100%;
-	/*display:block;
-	-webkit-backface-visibility: hidden;*/
 }
 .bxslider img{
 	margin: auto; 
