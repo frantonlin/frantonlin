@@ -162,6 +162,7 @@ ul, ol{
 	width:100%;
 	position: relative;
 	z-index: 51;
+	overflow: hidden;
 }
 #tf-about p.lead{
 	text-transform: uppercase;
