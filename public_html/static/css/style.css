@@ -492,16 +492,36 @@ input, textarea:focus {
 div.button {
 	padding-top:60px;
 }
+#success {
+	float:left;
+	color:#5bbd72;
+	font-size: 12px;
+	padding: 10px 40px;
+	border-top: 1px solid #5bbd72;
+	border-bottom: 1px solid #5bbd72;
+}
+#error {
+	float:left;
+	color:red;
+	font-size: 12px;
+	padding: 10px 40px;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+}
 
 button.btn.tf-btn.btn-default {
 	float: right;
-	background: #FFCC00;
-	border: 0;
+	background: #fff;
+	border: 1px solid #FFCC00;
 	border-radius: 0;
 	padding: 10px 40px;
-	color: #ffffff;
+	color: #5a5a5a;
 	text-transform: uppercase;
 	font-size:12px;
+}
+button.btn.tf-btn.btn-default:hover{
+	color: #fff;
+	background: #FFCC00;
 }
 
 .btn:active, .btn.active {
