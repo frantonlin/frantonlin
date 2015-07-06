@@ -297,12 +297,12 @@ a.fa.fa-angle-down:hover{
 ==============================*/
 #tf-portfolio{
 	position: relative;
-	padding: 4% 2%;
+	padding: 1.5% 2%;
 	background-color: #ffffff;
 	z-index: 100;
 }
 #tf-portfolio .container {
-	padding: 5px 10px;
+	padding: 27px 10px;
 }
 .categories{ 
 	padding: 10px 0;
