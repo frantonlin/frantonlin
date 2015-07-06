@@ -2,37 +2,37 @@ function main() {
   (function () {
     'use strict';
 
-    $("input#send").click(function() {
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var subject = $("input#subject").val();
-      var message = $("textarea#message").val();
+    // $("input#send").click(function() {
+    //   var name = $("input#name").val();
+    //   var email = $("input#email").val();
+    //   var subject = $("input#subject").val();
+    //   var message = $("textarea#message").val();
 
-      alert("WHOOOOO!!");
-      if (name=="") {
-        $("input#name").css("border","1px solid red");
-        $("input#name").focus();
-        return false;
-      }
+    //   alert("WHOOOOO!!");
+    //   if (name=="") {
+    //     $("input#name").css("border","1px solid red");
+    //     $("input#name").focus();
+    //     return false;
+    //   }
 
-      if (!validateEmail(email)) {
-        $("input#email").css("border","1px solid red");
-        $("input#email").focus();
-        return false;
-      }
+    //   if (!validateEmail(email)) {
+    //     $("input#email").css("border","1px solid red");
+    //     $("input#email").focus();
+    //     return false;
+    //   }
 
-      if (subject=="") {
-        $("input#subject").css("border","1px solid red");
-        $("input#subject").focus();
-        return false;
-      }
+    //   if (subject=="") {
+    //     $("input#subject").css("border","1px solid red");
+    //     $("input#subject").focus();
+    //     return false;
+    //   }
 
-      if (message=="") {
-        $("textarea#message").css("border","1px solid red");
-        $("textarea#message").focus();
-        return false;
-      }
-    });
+    //   if (message=="") {
+    //     $("textarea#message").css("border","1px solid red");
+    //     $("textarea#message").focus();
+    //     return false;
+    //   }
+    // });
 
     // $("input,textarea").jqBootstrapValidation({
     //   preventSubmit: true,
@@ -151,9 +151,9 @@ function main() {
 
 }
 
-function validateEmail(email) {
-  var re = [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?;
-  return re.test(email);
-}
+// function validateEmail(email) {
+//   var re = [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?;
+//   return re.test(email);
+// }
 
 main();
