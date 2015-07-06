@@ -4,6 +4,20 @@
         background-color: rgba(0, 0, 0, 0.65);
     }
 }
+@media (max-width: 625px) {
+    #tf-contact .container {
+        width:100%;
+        padding:0 10px;
+    }
+    #tf-contact .half-left {
+        width:100%;
+        clear:left;
+    }
+    #tf-contact .half-right {
+        width:100%;
+        clear:right;
+    }
+}
 /* tall (mobile portrait) */
 @media (max-width: 493px) {
     /*.content {
