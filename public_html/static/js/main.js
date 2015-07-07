@@ -120,13 +120,6 @@ function main() {
       }
 
       if(!error) {
-        // alert(name.val()+", "+email.val()+", "+subject.val()+", "+message.val());
-        // var data = {
-        //   'name': name.val(),
-        //   'email': email.val(),
-        //   'subject': subject.val(),
-        //   'message': message.val()
-        // };
         $.ajax({
           type: $("#contact-form").attr("method"),
           url: "../../" + $("#contact-form").attr("action"),

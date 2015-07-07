@@ -52,11 +52,11 @@ if (isset($_POST["submit"])) {
     // If there are no errors, send the email
     if (!$err) {
         echo "<p>If it gets here, it should send the email!</p>";
-        // if (mail($to, $subject, $body, $headers)) {
-        //     mail($email,"CC: $subject", $ccbody, $ccheaders);
-        // } else {
-        //     // error
-        // }
+        if (mail($to, $subject, $body, $headers)) {
+            mail($email,"CC: $subject", $ccbody, $ccheaders);
+        } else {
+            // error
+        }
     }
 }
 ?>
