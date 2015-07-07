@@ -8,7 +8,7 @@ $headers = 'From: test@frantonlin.com';
 // }
 
 if (isset($_POST["submit"])) {
-    echo "Success!!!</p>";
+    echo "<h1>Success!!!</h1>";
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -50,10 +50,10 @@ if (isset($_POST["submit"])) {
         if (mail($to, $subject, $body, $headers)) {
             mail($email,"CC: $subject", $ccbody, $ccheaders);
         } else {
-            // error
+            echo"<p>Well all the fields were right, but mail() broke for some reason...</p>";
         }
     }
 }
-echo "Failure...</p>";
+echo "<h1>Failure...</h1>";
 
 ?>
