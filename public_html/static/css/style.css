@@ -464,6 +464,9 @@ input, textarea:focus {
 	-webkit-box-shadow: transparent;
 	box-shadow: transparent;
 }
+#tf-contact .error {
+	border:1px solid red;
+}
 #tf-contact .form-input {
 	display: block;
 	width: 100%;
