@@ -124,7 +124,7 @@ function main() {
         '\nname:'+$("input#name").val()+
         '\nemail:'+$("input#email").val()+
         '\nsubject:'+$("input#subject").val()+
-        '\nmessage:'+$("input#message").val());
+        '\nmessage:'+$("textarea#message").val());
 
       if(!error) {
         $.ajax({
@@ -134,20 +134,28 @@ function main() {
             'name':$("input#name").val(),
             'email':$("input#email").val(),
             'subject':$("input#subject").val(),
-            'message':$("input#message").val()
+            'message':$("textarea#message").val()
           },
           beforeSend: function() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",
               "background": "#FFCC00"});
           },
-          success: function(html) {
-            $(".button #error").hide();
-            $(".button #success").show();
-            $("button#send").html("Sent");
-            $("button#send").prop('disabled', true);
+          success: function(data) {
+            if(data.status == 'success'){
+              $(".button #error").hide();
+              $(".button #success").show();
+              $("button#send").html("Sent");
+              $("button#send").prop('disabled', true);
+            } else {
+              $(".button #error").show();
+              $("button#send").html("Send");
+              $("button#send").css({"color": "#5a5a5a",
+                "background": "#fff"});
+              alert(data.status);
+            }
           },
-          error: function(html) {
+          error: function(data) {
             $(".button #error").show();
             $("button#send").html("Send");
             $("button#send").css({"color": "#5a5a5a",
