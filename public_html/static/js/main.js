@@ -129,7 +129,6 @@ function main() {
         $.ajax({
           type: $("form").attr("method"),
           url: "../" + $("form").attr("action"),
-          alert(url);
           data: data,
           beforeSend: function() {
             $("button#send").html("Sending");
