@@ -119,9 +119,8 @@ function main() {
         name.removeClass("error");
       }
 
-      alert(loc.substring(0, loc.lastIndexOf('/')));
-
       if(!error) {
+        alert(name.val()+", "+email.val()+", "+subject.val()+", "+message.val());
         var data = {
           'name': name.val(),
           'email': email.val(),
