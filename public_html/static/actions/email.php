@@ -21,44 +21,44 @@ if (isset($_POST["submit"])) {
     $ccheaders = "From: $email\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
-    $errName = False;
-    $errEmail = False;
-    $errSubject = False;
-    $errMessage = False;
+    // $errName = False;
+    // $errEmail = False;
+    // $errSubject = False;
+    // $errMessage = False;
 
     // Check if name has been entered
     if (!$_POST['name']) {
         echo "<p>name</p>";
-        $errName = True;
+        // $errName = True;
     }
     
     // Check if email has been entered and is valid
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         echo "<p>email</p>";
-        $errEmail = True;
+        // $errEmail = True;
     }
 
     // Check if subject has been entered
     if (!$_POST['subject']) {
         echo "<p>subject</p>";
-        $errSubject = True;
+        // $errSubject = True;
     }
     
     // Check if message has been entered
     if (!$_POST['message']) {
         echo "<p>message</p>";
-        $errMessage = True;
+        // $errMessage = True;
     }
 
     echo "<p>$errName</p>"
  
     // If there are no errors, send the email
-    if (!$errName && !$errEmail && !$errSubject && !$errMessage) {
-        if (mail($to, $subject, $body, $headers)) {
-            mail($email,"CC: $subject", $ccbody, $ccheaders);
-        } else {
-            // error
-        }
-    }
+    // if (!$errName && !$errEmail && !$errSubject && !$errMessage) {
+    //     if (mail($to, $subject, $body, $headers)) {
+    //         mail($email,"CC: $subject", $ccbody, $ccheaders);
+    //     } else {
+    //         // error
+    //     }
+    // }
 }
 ?>
