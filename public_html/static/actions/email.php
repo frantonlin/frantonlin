@@ -15,11 +15,33 @@ if (isset($_POST["submit"])) {
     $ccheaders = "From: $email\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
-        mail($email,"CC: $subject", $ccbody, $ccheaders);
-    } else {
-        // error
+    // Check if name has been entered
+    if (!$_POST['name']) {
+        echo("name");
+    }
+    
+    // Check if email has been entered and is valid
+    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        echo("email");
+    }
+
+    // Check if subject has been entered
+    if (!$_POST['subject']) {
+        echo("subject");
+    }
+    
+    // Check if message has been entered
+    if (!$_POST['message']) {
+        echo("message");
+    }
+ 
+    // If there are no errors, send the email
+    if (!$errName && !$errEmail && !$errSubject && !$errMessage) {
+        if (mail($to, $subject, $body, $headers)) {
+            mail($email,"CC: $subject", $ccbody, $ccheaders);
+        } else {
+            // error
+        }
     }
 }
 ?>
