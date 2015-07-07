@@ -48,14 +48,16 @@ if (isset($_POST["submit"])) {
     }
 
     echo "<p>Error: $err</p>";
+    echo "<p>Body:\r\n$body</p>";
  
     // If there are no errors, send the email
     if (!$err) {
         echo "<p>If it gets here, it should send the email!</p>";
         if (mail($to, $subject, $body, $headers)) {
             mail($email,"CC: $subject", $ccbody, $ccheaders);
+            echo "<p>It should've worked!</p>";
         } else {
-            // error
+            echo "<p>php mail() failed</p>";
         }
     }
 }
