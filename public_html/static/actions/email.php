@@ -2,7 +2,7 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 set_error_handler("var_dump");
-echo "hello?";
+echo "<p>hello?</p>";
 
 $err="Well at least it gets here"
 if (isset($_POST["submit"])) {
