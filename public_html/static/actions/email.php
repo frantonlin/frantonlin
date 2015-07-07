@@ -55,12 +55,12 @@ if (isset($_POST["submit"])) {
         echo "<p>If it gets here, it should send the email!</p>";
         if (mail($to, $subject, $body, $headers)) {
             mail($email,"CC: $subject", $ccbody, $ccheaders);
-            $response_array['status'] = 'success';  
+            echo json_encode(array("success" => true));
         } else {
-            $response_array['status'] = 'mail() error';  
+            echo json_encode(array("success" => false,"error" => "mail() error")); 
         }
     } else {
-        $response_array['status'] = '$err error';  
+        echo json_encode(array("success" => false,"error" => $err));
     }
 }
 ?>

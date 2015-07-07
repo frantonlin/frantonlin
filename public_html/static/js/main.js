@@ -142,7 +142,7 @@ function main() {
               "background": "#FFCC00"});
           },
           success: function(data) {
-            if(data.status == 'success'){
+            if(data.success){
               $(".button #error").hide();
               $(".button #success").show();
               $("button#send").html("Sent");
@@ -152,7 +152,7 @@ function main() {
               $("button#send").html("Send");
               $("button#send").css({"color": "#5a5a5a",
                 "background": "#fff"});
-              alert(data.status);
+              alert(data.error);
             }
           },
           error: function(data) {
