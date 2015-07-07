@@ -119,6 +119,8 @@ function main() {
         name.removeClass("error");
       }
 
+      alert("../" + $("form").attr("action"));
+
       if(!error) {
         var data = {
           name: name.val(),
