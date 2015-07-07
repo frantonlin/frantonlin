@@ -78,74 +78,73 @@ function main() {
     //   $(this).tab("show");
     // });
 
-    // function validateEmail(email) {
-    //   var re = [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?;
-    //   return re.test(email);
-    // }
-
     $("#send").click(function(e) {
       var name = $("input#name");
       var email = $("input#email");
       var subject = $("input#subject");
       var message = $("textarea#message");
 
-      if (name=="") {
-        name.addClass("error");
-        $("input#name").focus();
-        error = true;
-      }
+      var error = false;
+      var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-      if (!validateEmail(email)) {
-        email.addClass("error");
-        email.focus();
-        error = true;
-      }
-
-      if (subject=="") {
-        subject.addClass("error");
-        subject.focus();
-        error = true;
-      }
-
-      if (message=="") {
+      if (message.val()=="") {
         message.addClass("error");
         message.focus();
         error = true;
+      } else {
+        message.removeClass("error");
+      }
+
+      if (subject.val()=="") {
+        subject.addClass("error");
+        subject.focus();
+        error = true;
+      } else {
+        subject.removeClass("error");
+      }
+
+      if (!reg.test(email.val())) {
+        email.addClass("error");
+        email.focus();
+        error = true;
+      } else {
+        email.removeClass("error");
+      }
+
+      if (name.val()=="") {
+        name.addClass("error");
+        $("input#name").focus();
+        error = true;
+      } else {
+        name.removeClass("error");
       }
         
-      // if(fields.name.val()=="") { fields.name.addClass("error"); error = true; }
-      //   if(fields.email.val()=="") { 
-      //     fields.email.addClass("error"); 
-      //     error = true; 
-      //   } else {
-      //     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-      //     if(!reg.test(fields.email.val())) {
-      //       fields.email.addClass("error"); 
-      //       error = true;
-      //     }
-      //   }
-      //   if(fields.subject.val()=="") { fields.subject.addClass("error"); error = true; }
-      //   if(fields.message.val()=="") { fields.message.addClass("error"); error = true; }
-        
-      //   if(!error) {
-      //     $.ajax({
-      //       type: $("form").attr("method"),
-      //       url: $("form").attr("action"),
-      //       data: "name=" + $("#name").val() + "&email=" + $("#email").val() + "&subject=" + $("#subject").val() + "&budget=" + $("#budget").val() + "&message=" + $("#message").val().replace('&','%26'),
-      //       beforeSend: function() {
-      //         $("#status button").hide();
-      //       },
-      //       success: function(html) {
-      //         $("#status #success").html(html).show();
-      //       },
-      //       error: function(html) {
-      //         $("#status button").show();
-      //         $("#status #error").html(html).show();
-      //       }
-      //     });
-      //   }
-      e.preventDefault()
-      });
+      if(!error) {
+        $.ajax({
+          type: $("form").attr("method"),
+          url: $("form").attr("action"),
+          data: {name: name.val(), email: email.val(), subject: subject.val(), message: message.val()},
+          beforeSend: function() {
+            $("button#send").html("Sending");
+            $("button#send").css({"color": "#fff",
+              "background": "#FFCC00"});
+          },
+          success: function(html) {
+            $(".button #error").hide();
+            $(".button #success").show();
+            $("button#send").html("Sent");
+            $("button#send").prop('disabled', true);
+          },
+          error: function(html) {
+            $(".button #error").show();
+            $("button#send").html("Send");
+            $("button#send").css({"color": "#5a5a5a",
+              "background": "#fff"});
+          }
+        });
+      }
+      return false;
+    });
 
     /*====================================
     Show Menu on Book
