@@ -1,4 +1,8 @@
 <?php
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
+
 $err="Well at least it gets here"
 if (isset($_POST["submit"])) {
 
@@ -19,22 +23,22 @@ if (isset($_POST["submit"])) {
 
     // Check if name has been entered
     if (!$_POST['name']) {
-        echo "name";
+        echo "<p>name</p>";
     }
     
     // Check if email has been entered and is valid
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        echo "email";
+        echo "<p>email</p>";
     }
 
     // Check if subject has been entered
     if (!$_POST['subject']) {
-        echo "subject";
+        echo "<p>subject</p>";
     }
     
     // Check if message has been entered
     if (!$_POST['message']) {
-        echo "message";
+        echo "<p>message</p>";
     }
  
     // If there are no errors, send the email
