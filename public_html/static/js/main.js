@@ -119,7 +119,7 @@ function main() {
         name.removeClass("error");
       }
 
-      alert(window.location.pathname);
+      alert(loc.substring(0, loc.lastIndexOf('/')));
 
       if(!error) {
         var data = {
