@@ -123,7 +123,8 @@ function main() {
         $.ajax({
           type: $("#contact-form").attr("method"),
           url: "../../" + $("#contact-form").attr("action"),
-          data: {'name':$("input#name").val(),
+          data: {'submit':'submit',
+            'name':$("input#name").val(),
             'email':$("input#email").val(),
             'subject':$("input#subject").val(),
             'message':$("input#mesage").val()
