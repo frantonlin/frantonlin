@@ -21,6 +21,11 @@ if (isset($_POST["submit"])) {
     $ccheaders = "From: $email\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
+    $errName = False;
+    $errEmail = False;
+    $errSubject = False;
+    $errMessage = False;
+
     // Check if name has been entered
     if (!$_POST['name']) {
         echo "<p>name</p>";
@@ -47,7 +52,7 @@ if (isset($_POST["submit"])) {
 
     echo "<p>$errName</p>";
  
-    If there are no errors, send the email
+    // If there are no errors, send the email
     if (!$errName && !$errEmail && !$errSubject && !$errMessage) {
         echo "<p>If it gets here, it should send the email!</p>";
         // if (mail($to, $subject, $body, $headers)) {
