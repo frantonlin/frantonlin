@@ -21,6 +21,11 @@ if (isset($_POST["submit"])) {
     $ccheaders = "From: $email\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
+    $errName = False;
+    $errEmail = False;
+    $errSubject = False;
+    $errMessage = False;
+
     // Check if name has been entered
     if (!$_POST['name']) {
         echo "<p>name</p>";
