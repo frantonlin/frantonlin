@@ -78,6 +78,11 @@ function main() {
     //   $(this).tab("show");
     // });
 
+    // function validateEmail(email) {
+    //   var re = [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?;
+    //   return re.test(email);
+    // }
+
     $("#send").click(function(e) {
       var name = $("input#name");
       var email = $("input#email");
@@ -140,7 +145,7 @@ function main() {
       //     });
       //   }
       e.preventDefault()
-    });
+      });
 
     /*====================================
     Show Menu on Book
@@ -213,11 +218,6 @@ function main() {
 
   }());
 
-}
-
-function validateEmail(email) {
-  var re = [a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?;
-  return re.test(email);
 }
 
 main();
