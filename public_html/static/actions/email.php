@@ -26,25 +26,25 @@ if (isset($_POST["submit"])) {
     // Check if name has been entered
     if (!$_POST['name']) {
         echo "<p>name</p>";
-        $err = "name ";
+        $err .= "name ";
     }
     
     // Check if email has been entered and is valid
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         echo "<p>email</p>";
-        $err = "email ";
+        $err .= "email ";
     }
 
     // Check if subject has been entered
     if (!$_POST['subject']) {
         echo "<p>subject</p>";
-        $err = "subject ";
+        $err .= "subject ";
     }
     
     // Check if message has been entered
     if (!$_POST['message']) {
         echo "<p>message</p>";
-        $err = "message ";
+        $err .= "message ";
     }
 
     echo "<p>Error: $err</p>";
