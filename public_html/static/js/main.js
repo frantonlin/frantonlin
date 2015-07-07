@@ -120,17 +120,21 @@ function main() {
       }
 
       if(!error) {
-        alert(name.val()+", "+email.val()+", "+subject.val()+", "+message.val());
-        var data = {
-          'name': name.val(),
-          'email': email.val(),
-          'subject': subject.val(),
-          'message': message.val()
-        };
+        // alert(name.val()+", "+email.val()+", "+subject.val()+", "+message.val());
+        // var data = {
+        //   'name': name.val(),
+        //   'email': email.val(),
+        //   'subject': subject.val(),
+        //   'message': message.val()
+        // };
         $.ajax({
-          type: $("form").attr("method"),
-          url: "../../" + $("form").attr("action"),
-          data: data,
+          type: $("#contact-form").attr("method"),
+          url: "../../" + $("#contact-form").attr("action"),
+          data: {'name':$("input#name").val(),
+            'email':$("input#email").val(),
+            'subject':$("input#subject").val(),
+            'message':$("input#mesage").val()
+          },
           beforeSend: function() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",
