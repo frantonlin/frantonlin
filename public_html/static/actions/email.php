@@ -1,6 +1,7 @@
 <?php
+$err="Well at least it gets here"
 if (isset($_POST["submit"])) {
-    $err="Well at least it gets here"
+
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
