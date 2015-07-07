@@ -121,10 +121,10 @@ function main() {
 
       alert("Type: "+$("#contact-form").attr("method")+"\nURL: "+"../../" + $("#contact-form").attr("action")+
         "\nData:"+'\nsubmit:'+'submit'+
-        '\nname'+$("input#name").val()+
-        '\nemail'+$("input#email").val()+
-        '\nsubject'+$("input#subject").val()+
-        '\nmessage'+$("input#mesage").val());
+        '\nname:'+$("input#name").val()+
+        '\nemail:'+$("input#email").val()+
+        '\nsubject:'+$("input#subject").val()+
+        '\nmessage:'+$("input#message").val());
 
       if(!error) {
         $.ajax({
@@ -134,7 +134,7 @@ function main() {
             'name':$("input#name").val(),
             'email':$("input#email").val(),
             'subject':$("input#subject").val(),
-            'message':$("input#mesage").val()
+            'message':$("input#message").val()
           },
           beforeSend: function() {
             $("button#send").html("Sending");
