@@ -8,6 +8,7 @@ $headers = 'From: test@frantonlin.com';
 // }
 
 if (isset($_POST["submit"])) {
+    echo "Success!!!</p>";
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -53,5 +54,6 @@ if (isset($_POST["submit"])) {
         }
     }
 }
+echo "Failure...</p>";
 
 ?>
