@@ -118,12 +118,18 @@ function main() {
       } else {
         name.removeClass("error");
       }
-        
+
       if(!error) {
+        var data = {
+          name: name.val(),
+          email: email.val(),
+          subject: subject.val(),
+          message: message.val()
+        };
         $.ajax({
           type: $("form").attr("method"),
           url: $("form").attr("action"),
-          data: {name: name.val(), email: email.val(), subject: subject.val(), message: message.val()},
+          data: data,
           beforeSend: function() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",
