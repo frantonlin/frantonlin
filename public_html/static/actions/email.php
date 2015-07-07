@@ -24,22 +24,28 @@ if (isset($_POST["submit"])) {
     // Check if name has been entered
     if (!$_POST['name']) {
         echo "<p>name</p>";
+        $errName = True;
     }
     
     // Check if email has been entered and is valid
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
         echo "<p>email</p>";
+        $errEmail = True;
     }
 
     // Check if subject has been entered
     if (!$_POST['subject']) {
         echo "<p>subject</p>";
+        $errSubject = True;
     }
     
     // Check if message has been entered
     if (!$_POST['message']) {
         echo "<p>message</p>";
+        $errMessage = True;
     }
+
+    echo "<p>$errName</p>"
  
     // If there are no errors, send the email
     if (!$errName && !$errEmail && !$errSubject && !$errMessage) {
