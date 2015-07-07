@@ -121,10 +121,10 @@ function main() {
 
       if(!error) {
         var data = {
-          name: name.val(),
-          email: email.val(),
-          subject: subject.val(),
-          message: message.val()
+          'name': name.val(),
+          'email': email.val(),
+          'subject': subject.val(),
+          'message': message.val()
         };
         $.ajax({
           type: $("form").attr("method"),
