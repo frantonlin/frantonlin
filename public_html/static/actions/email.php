@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     $headers = "From: contact@frantonlin.com\r\n"; 
     $headers .= "Reply-To: $email"; 
 
-    $ccbody = "This is a copy of your message to Franton Lin.\n\n$message"
+    $ccbody = "This is a copy of your message to Franton Lin.\n\n$message";
     $ccheaders = "From: $email\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
