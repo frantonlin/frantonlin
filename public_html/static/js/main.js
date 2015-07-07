@@ -119,7 +119,7 @@ function main() {
         name.removeClass("error");
       }
 
-      alert("../../" + $("form").attr("action"));
+      alert(window.location.pathname);
 
       if(!error) {
         var data = {
