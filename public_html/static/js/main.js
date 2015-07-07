@@ -130,12 +130,12 @@ function main() {
         $.ajax({
           type: $("#contact-form").attr("method"),
           url: "../../" + $("#contact-form").attr("action"),
-          data: {'submit':'submit',
-            'name':$("input#name").val(),
-            'email':$("input#email").val(),
-            'subject':$("input#subject").val(),
-            'message':$("textarea#message").val()
-          },
+          dataType: "json",
+          data:
+            'name='+$("input#name").val()+
+            '&email='+$("input#email").val()+
+            '&subject='+$("input#subject").val()+
+            '&message='+$("textarea#message").val(),
           beforeSend: function() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",
