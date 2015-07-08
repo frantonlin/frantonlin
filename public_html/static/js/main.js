@@ -132,7 +132,8 @@ function main() {
           url: "../../" + $("#contact-form").attr("action"),
           dataType: "json",
           data:
-            'name='+$("input#name").val()+
+            'send=send'+
+            '&name='+$("input#name").val()+
             '&email='+$("input#email").val()+
             '&subject='+$("input#subject").val()+
             '&message='+$("textarea#message").val(),
@@ -147,6 +148,7 @@ function main() {
               $(".button #success").show();
               $("button#send").html("Sent");
               $("button#send").prop('disabled', true);
+              alert("Success!")
             } else {
               $(".button #error").show();
               $("button#send").html("Send");

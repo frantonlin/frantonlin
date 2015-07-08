@@ -5,7 +5,7 @@ ini_set('display_errors', 'On');
 set_error_handler("var_dump");
 echo "<p>hello?</p>";
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["send"])) {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -26,42 +26,42 @@ if (isset($_POST["submit"])) {
 
     // Check if name has been entered
     if (!$_POST['name']) {
-        echo "<p>name</p>";
+        // echo "<p>name</p>";
         $err .= "name ";
     }
     
     // Check if email has been entered and is valid
     if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        echo "<p>email</p>";
+        // echo "<p>email</p>";
         $err .= "email ";
     }
 
     // Check if subject has been entered
     if (!$_POST['subject']) {
-        echo "<p>subject</p>";
+        // echo "<p>subject</p>";
         $err .= "subject ";
     }
     
     // Check if message has been entered
     if (!$_POST['message']) {
-        echo "<p>message</p>";
+        // echo "<p>message</p>";
         $err .= "message ";
     }
 
-    echo "<p>Error: $err</p>";
-    echo "<p>Body:\r\n$body</p>";
+    // echo "<p>Error: $err</p>";
+    // echo "<p>Body:\r\n$body</p>";
  
     // If there are no errors, send the email
     if (!$err) {
-        echo "<p>If it gets here, it should send the email!</p>";
-        if (mail($to, $subject, $body, $headers)) {
-            mail($email,"CC: $subject", $ccbody, $ccheaders);
-            echo json_encode(array("success" => true));
+        // echo "<p>If it gets here, it should send the email!</p>";
+        if (TRUE) {// mail($to, $subject, $body, $headers)) {
+            // mail($email,"CC: $subject", $ccbody, $ccheaders);
+            echo json_encode(array("success" => TRUE));
         } else {
-            echo json_encode(array("success" => false,"error" => "mail() error")); 
+            echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
         }
     } else {
-        echo json_encode(array("success" => false,"error" => $err));
+        echo json_encode(array("success" => FALSE,"error" => $err));
     }
 }
 ?>
