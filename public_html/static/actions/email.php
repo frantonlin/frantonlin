@@ -54,7 +54,7 @@ if (isset($_POST['send'])) {
     // If there are no errors, send the email
     if (!$err) {
         // echo "<p>If it gets here, it should send the email!</p>";
-        if (TRUE) {mail($to, $subject, $body, $headers)) {
+        if (mail($to, $subject, $body, $headers)) {
             mail($email,"CC: $subject", $ccbody, $ccheaders);
             echo json_encode(array("success" => TRUE));
         } else {
