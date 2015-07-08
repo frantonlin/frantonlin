@@ -148,7 +148,7 @@ function main() {
               $(".button #success").show();
               $("button#send").html("Sent");
               $("button#send").prop('disabled', true);
-              alert("Success!")
+              alert("Success!");
             } else {
               $(".button #error").show();
               $("button#send").html("Send");
