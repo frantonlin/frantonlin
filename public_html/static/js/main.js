@@ -120,7 +120,7 @@ function main() {
       }
 
       alert("Type: "+$("#contact-form").attr("method")+"\nURL: "+"../../" + $("#contact-form").attr("action")+
-        "\nData:"+'\nsubmit:'+'submit'+
+        "\nData:"+'\nsend:'+'send'+
         '\nname:'+$("input#name").val()+
         '\nemail:'+$("input#email").val()+
         '\nsubject:'+$("input#subject").val()+
@@ -162,6 +162,7 @@ function main() {
             $("button#send").html("Send");
             $("button#send").css({"color": "#5a5a5a",
               "background": "#fff"});
+            alert("The php is broken");
           }
         });
       }

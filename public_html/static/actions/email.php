@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: text/json; charset=utf8");
+// header("Content-Type: text/json; charset=utf8");
 error_reporting(-1);
 ini_set('display_errors', 'On');
 set_error_handler("var_dump");
