@@ -409,7 +409,7 @@ ol.type li a.active { font-weight: 700; }
 
 /* Contact Section */
 #tf-contact{
-	padding: 8.5% 2%;
+	padding: 5% 2%;
 	background-color: #ffffff;
 	position:relative;
 	z-index: 100;
@@ -422,7 +422,12 @@ ol.type li a.active { font-weight: 700; }
 
 #tf-contact .form-group {
 	padding-top: 20px;
-	border-bottom:1px solid black;
+	border-bottom: 1px solid black;
+}
+#tf-contact .form-group.text-area {
+	padding-top: 0;
+	margin-top: 30px;
+	border-top: 1px solid black;
 }
 #tf-contact .half-left {
 	width:280px;
@@ -450,6 +455,7 @@ input, textarea {
 }
 textarea {
 	resize:vertical;
+	height:120px;
 }
 input, textarea:focus {
 	border-color: inherit;
