@@ -2,82 +2,6 @@ function main() {
   (function () {
     'use strict';
 
-    // $("input#send").click(function() {
-    //   var name = $("input#name").val();
-    //   var email = $("input#email").val();
-    //   var subject = $("input#subject").val();
-    //   var message = $("textarea#message").val();
-
-    //   alert("WHOOOOO!!");
-    //   if (name=="") {
-    //     $("input#name").css("border","1px solid red");
-    //     $("input#name").focus();
-    //     return false;
-    //   }
-
-    //   if (!validateEmail(email)) {
-    //     $("input#email").css("border","1px solid red");
-    //     $("input#email").focus();
-    //     return false;
-    //   }
-
-    //   if (subject=="") {
-    //     $("input#subject").css("border","1px solid red");
-    //     $("input#subject").focus();
-    //     return false;
-    //   }
-
-    //   if (message=="") {
-    //     $("textarea#message").css("border","1px solid red");
-    //     $("textarea#message").focus();
-    //     return false;
-    //   }
-    // });
-
-    // $("input,textarea").jqBootstrapValidation({
-    //   preventSubmit: true,
-    //   submitError: function($form, event, errors) {
-    //     // something to have when submit produces an error
-    //   },
-    //   submitSuccess: function($form, event) {
-    //     event.preventDefault(); // prevent default submit haviour
-    //     // get values from FORM
-    //     var name = $("input#name").val();
-    //     var email = $("input#email").val();
-    //     var subject = $("input#subject").val();
-    //     var message = $("textarea#message").val();
-
-    //     $.ajax({
-    //       url: "../actions/derp.php",//TODO
-    //       type: "POST",
-    //       data: {name: name, email: email, subject: subject, message: message},
-    //       cache: false,
-    //       success: function() {
-    //         // Success message
-    //         $('#success').css("display", "block");
-   
-    //         //clear all fields
-    //         $('#contact-form').trigger("reset");
-    //       },
-    //       error: function() {
-    //         // Fail message
-    //         $('#error').css("display", "block");
-
-    //         //clear all fields
-    //         $('#contact-form').trigger("reset");
-    //       },
-    //     })
-    //   },
-    //   filter: function() {
-    //     return $(this).is(":visible");
-    //   },
-    // });
-   
-    // $("a[data-toggle=\"tab\"]").click(function(e) {
-    //   e.preventDefault();
-    //   $(this).tab("show");
-    // });
-
     $("#send").click(function(e) {
       var name = $("input#name");
       var email = $("input#email");
@@ -119,12 +43,12 @@ function main() {
         name.removeClass("error");
       }
 
-      alert("Type: "+$("#contact-form").attr("method")+"\nURL: "+"../../" + $("#contact-form").attr("action")+
-        "\nData:"+'\nsend:'+'send'+
-        '\nname:'+$("input#name").val()+
-        '\nemail:'+$("input#email").val()+
-        '\nsubject:'+$("input#subject").val()+
-        '\nmessage:'+$("textarea#message").val());
+      // alert("Type: "+$("#contact-form").attr("method")+"\nURL: "+"../../" + $("#contact-form").attr("action")+
+      //   "\nData:"+'\nsend:'+'send'+
+      //   '\nname:'+$("input#name").val()+
+      //   '\nemail:'+$("input#email").val()+
+      //   '\nsubject:'+$("input#subject").val()+
+      //   '\nmessage:'+$("textarea#message").val());
 
       if(!error) {
         $.ajax({
@@ -148,13 +72,13 @@ function main() {
               $(".button #success").show();
               $("button#send").html("Sent");
               $("button#send").prop('disabled', true);
-              alert("Success!");
+              // alert("Success!");
             } else {
               $(".button #error").show();
               $("button#send").html("Send");
               $("button#send").css({"color": "#5a5a5a",
                 "background": "#fff"});
-              alert(data.error);
+              // alert(data.error);
             }
           },
           error: function(data) {
@@ -162,7 +86,7 @@ function main() {
             $("button#send").html("Send");
             $("button#send").css({"color": "#5a5a5a",
               "background": "#fff"});
-            alert("The php is broken");
+            // alert("The php is broken");
           }
         });
       }
