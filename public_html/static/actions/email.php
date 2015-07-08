@@ -1,17 +1,17 @@
 <?php
 // header("Content-Type: text/json; charset=utf8");
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
-echo "<p>hello?</p>";
+// error_reporting(-1);
+// ini_set('display_errors', 'On');
+// set_error_handler("var_dump");
+// echo "<p>hello?</p>";
 
-if (isset($_POST["send"])) {
+if (isset($_POST['send'])) {
 
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
-
     $message = $_POST['message'];
+    
     $to = 'franton.lin@students.olin.edu'; 
     
     $body = "From $name: $email\r\n$message";

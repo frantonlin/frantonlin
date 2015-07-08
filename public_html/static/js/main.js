@@ -157,7 +157,7 @@ function main() {
               alert(data.error);
             }
           },
-          error: function() {
+          error: function(data) {
             $(".button #error").show();
             $("button#send").html("Send");
             $("button#send").css({"color": "#5a5a5a",
