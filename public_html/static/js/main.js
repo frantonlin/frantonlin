@@ -25,11 +25,20 @@ function main() {
       var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
       if (message.val()=="") {
+        message.removeClass("linkerror");
+        $(".button #linkerror").hide();
         message.addClass("error");
         message.focus();
         error = true;
+      } else if (message.val().indexOf('://')!==-1) {
+        message.addClass("linkerror");
+        message.focus();
+        $(".button #linkerror").show();
+        error = true;
       } else {
         message.removeClass("error");
+        message.removeClass("linkerror");
+        $(".button #linkerror").hide();
       }
 
       if (subject.val()=="") {

@@ -467,6 +467,10 @@ input, textarea:focus {
 	border:1px solid red;
 	padding:9px 7px;
 }
+#tf-contact .linkerror {
+	border:1px solid orange;
+	padding:9px 7px;
+}
 #tf-contact .form-input {
 	display: block;
 	width: 100%;
@@ -510,6 +514,14 @@ div.button {
 	padding: 10px 40px;
 	border-top: 1px solid red;
 	border-bottom: 1px solid red;
+}
+#linkerror {
+	float:left;
+	color:orange;
+	font-size: 12px;
+	padding: 10px 40px;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
 }
 
 button#send {

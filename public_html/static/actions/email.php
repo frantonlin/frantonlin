@@ -20,25 +20,24 @@ if (isset($_POST['send'])) {
     $err = "";
 
     // Check if name has been entered
-    if (!$_POST['name']) {
+    if (!$name) {
         $err .= "name ";
     }
     
     // Check if email has been entered and is valid
-    if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $err .= "email ";
     }
 
     // Check if subject has been entered
-    if (!$_POST['subject']) {
+    if (!$subject) {
         $err .= "subject ";
     }
     
     // Check if message has been entered
-    if (!$_POST['message']) {
+    if (!$message) {
         $err .= "message ";
     }
-
  
     // If there are no errors, send the email
     if (!$err) {
