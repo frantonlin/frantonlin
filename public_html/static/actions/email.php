@@ -64,7 +64,7 @@ if (isset($_POST['send'])) {
                     Email from $name: $email with subject $subject\n
                     $message\n
                     ----------------------------------------------------------------------------------------------------\n\n";
-        $spamlog = fopen("../../spam.log", "a");
+        $spamlog = fopen("/var/www/frantonlin.com/spam.log", "a");
         fwrite($spamlog, $spamentry);
         fclose($spamlog);
         echo json_encode(array("success" => TRUE,"error" => $err)); 
