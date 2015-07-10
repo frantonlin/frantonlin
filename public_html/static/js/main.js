@@ -52,13 +52,13 @@ function main() {
         subject.removeClass("error");
       }
 
-      if (!reg.test(email.val())) {
-        email.addClass("error");
-        email.focus();
-        error = true;
-      } else {
-        email.removeClass("error");
-      }
+      // if (!reg.test(email.val())) {
+      //   email.addClass("error");
+      //   email.focus();
+      //   error = true;
+      // } else {
+      //   email.removeClass("error");
+      // }
 
       if (name.val()=="") {
         name.addClass("error");
