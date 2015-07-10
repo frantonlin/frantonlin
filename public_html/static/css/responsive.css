@@ -61,6 +61,21 @@
         float: none !important;
         text-align: center;
     }
+    #success {
+        padding: 10px 0;
+        text-align: center;
+        width: 150px;
+    }
+    #error {
+        padding: 10px 0;
+        text-align: center;
+        width: 150px;
+    }
+    #linkerror {
+        padding: 10px 0;
+        text-align: center;
+        width: 150px;
+    }
 }
 @media (min-width:494px) {
     #tf-menu .avatar{

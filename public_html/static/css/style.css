@@ -504,6 +504,7 @@ div.button {
 	color:#5bbd72;
 	font-size: 12px;
 	padding: 10px 40px;
+	height:40px;
 	border-top: 1px solid #5bbd72;
 	border-bottom: 1px solid #5bbd72;
 }
@@ -512,6 +513,7 @@ div.button {
 	color:red;
 	font-size: 12px;
 	padding: 10px 40px;
+	height:40px;
 	border-top: 1px solid red;
 	border-bottom: 1px solid red;
 }
@@ -520,6 +522,7 @@ div.button {
 	color:orange;
 	font-size: 12px;
 	padding: 10px 40px;
+	height:40px;
 	border-top: 1px solid orange;
 	border-bottom: 1px solid orange;
 }
@@ -528,7 +531,7 @@ button#send {
 	float: right;
 	background: #fff;
 	width:112px;
-	height:38px;
+	height:40px;
 	border: 1px solid #FFCC00;
 	border-radius: 0;
 	padding:0;
