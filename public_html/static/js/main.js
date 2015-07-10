@@ -16,6 +16,7 @@ function main() {
     });
 
     $("#send").click(function(e) {
+      $('.bxslider').redrawSlider();
       var name = $("input#name");
       var email = $("input#email");
       var subject = $("input#subject");
@@ -181,8 +182,7 @@ function main() {
           }
         });
         return false;
-      });    
-      $('.bxslider').redrawSlider();
+      });
     });
 
     $(window).onpageshow = function(e) {
