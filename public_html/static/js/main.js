@@ -186,13 +186,6 @@ function main() {
       slider.redrawSlider();
     });
 
-    $(window).onpageshow = function(e) {
-      if (e.persisted) {
-        alert("Page shown");
-        slider.redrawSlider();
-      }
-    };
-
   }());
 
 }
