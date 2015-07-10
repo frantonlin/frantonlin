@@ -142,7 +142,6 @@ function main() {
     })
 
   	$(document).ready(function() {
-      alert("Page loaded");
       $('.bxslider').bxSlider({
         mode: 'fade',
         auto: true,
@@ -153,14 +152,13 @@ function main() {
         pager: false,
         captions: true
       });
-
-      $('.bxslider').redrawSlider();
     });
 
   	/*====================================
     Portfolio Isotope Filter
     ======================================*/
     $(window).load(function() {
+      alert("Page loaded");
       var $container = $('#lightbox');
       $container.isotope({
         filter: '*',
@@ -184,6 +182,7 @@ function main() {
         });
         return false;
       });    
+      $('.bxslider').redrawSlider();
     });
 
     $(window).onpageshow = function(e) {
