@@ -142,6 +142,7 @@ function main() {
     })
 
   	$(document).ready(function() {
+      alert("Page loaded");
       $('.bxslider').bxSlider({
         mode: 'fade',
         auto: true,
@@ -189,7 +190,7 @@ function main() {
         $('.bxslider').redrawSlider();
       }
     };
-    
+
   }());
 
 }
