@@ -60,11 +60,13 @@ if (isset($_POST['send'])) {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
         }
     } elseif (strstr($err, "spam")) {
-        $spamlog = date('M d, Y   H:i:s')."   errors: $err\r\n
+        $spamentry = date('M d, Y   H:i:s')."   errors: $err\r\n
                     Email from $name: $email with subject $subject\r\n
                     $message\r\n
                     ----------------------------------------------------------------------------------------------------\r\n\r\n";
-        file_put_contents("../../../spam.log", $spamlog, FILE_APPEND | LOCK_EX);
+        $spamlog = fopen("../../spam.log", "a");
+        fwrite($spamlog, $spamentry);
+        fclose($spamlog);
         echo json_encode(array("success" => TRUE,"error" => $err)); 
     } else {
         echo json_encode(array("success" => FALSE,"error" => $err));
