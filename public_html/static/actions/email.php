@@ -60,10 +60,7 @@ if (isset($_POST['send'])) {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
         }
     } elseif (strstr($err, "spam")) {
-        $spamentry = date('M d, Y   H:i:s')."   errors: $err\n
-                    Email from $name: $email with subject $subject\n
-                    $message\n
-                    ----------------------------------------------------------------------------------------------------\n\n";
+        $spamentry = date('M d, Y   H:i:s')."   errors: $err\nEmail from $name: $email with subject $subject\n$message\n----------------------------------------------------------------------------------------------------\n\n";
         $spamlog = fopen("/var/www/frantonlin.com/spam.log", "a");
         fwrite($spamlog, $spamentry);
         fclose($spamlog);
