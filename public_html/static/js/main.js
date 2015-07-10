@@ -180,8 +180,13 @@ function main() {
           }
         });
         return false;
-      });
-    
+      });    
+    });
+
+    $(window).bind("pageshow", function(event) {
+      if (event.originalEvent.persisted) {
+        $('.bxslider').redrawSlider();
+      }
     });
 
   }());
