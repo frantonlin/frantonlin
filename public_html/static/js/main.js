@@ -32,12 +32,12 @@ function main() {
         message.focus();
         error = true;
       } 
-      // else if (message.val().indexOf('://')!==-1) {
-      //   message.addClass("linkerror");
-      //   message.focus();
-      //   $(".button #linkerror").show();
-      //   error = true;
-      // } 
+      else if (message.val().indexOf('://')!==-1) {
+        message.addClass("linkerror");
+        message.focus();
+        $(".button #linkerror").show();
+        error = true;
+      } 
       else {
         message.removeClass("error");
         message.removeClass("linkerror");
@@ -52,13 +52,13 @@ function main() {
         subject.removeClass("error");
       }
 
-      // if (!reg.test(email.val())) {
-      //   email.addClass("error");
-      //   email.focus();
-      //   error = true;
-      // } else {
-      //   email.removeClass("error");
-      // }
+      if (!reg.test(email.val())) {
+        email.addClass("error");
+        email.focus();
+        error = true;
+      } else {
+        email.removeClass("error");
+      }
 
       if (name.val()=="") {
         name.addClass("error");
