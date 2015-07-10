@@ -9,7 +9,7 @@ if (isset($_POST['send'])) {
 
     $to = 'Franton Lin <franton.lin@students.olin.edu>'; 
     
-    $body = "From $name: $email\r\n\r\n$message";
+    $body = "Email from $name: $email\r\n\r\n$message";
     $headers = "From: Frantonlin.com <contact@frantonlin.com>\r\n"; 
     $headers .= "Reply-To: $email"; 
 
@@ -21,32 +21,51 @@ if (isset($_POST['send'])) {
 
     // Check if name has been entered
     if (!$name) {
-        $err .= "name ";
+        $err .= "noname ";
     }
     
     // Check if email has been entered and is valid
-    if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $err .= "email ";
+    if (!$email) {
+        $err .= "noemail ";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Check if email is trying to inject headers
+        $err .= "spamemail ";
     }
 
     // Check if subject has been entered
     if (!$subject) {
-        $err .= "subject ";
+        $err .= "nosubject ";
+    } elseif (preg_match('/[\r\n]|Content-Type:|Bcc:|Cc:/i', $subject)) {
+        // Check if subject is trying to inject headers
+        $err .= "spamsubject ";
     }
     
     // Check if message has been entered
     if (!$message) {
-        $err .= "message ";
+        $err .= "nomessage ";
+    } elseif (preg_match('/[\r\n]|Content-Type:|Bcc:|Cc:/i', $message)) {
+        // Check if message is trying to inject headers
+        $err .= "spammessage ";
+    }
+    if (preg_match('/:\/\//', $message)) {
+        $err .= "spamurlmessage";
     }
  
     // If there are no errors, send the email
     if (!$err) {
         if (TRUE) { //mail($to, $subject, $body, $headers)) {
-            // mail($email,"CC: $subject", $ccbody, $ccheaders);
+            // mail($email,"Copy: $subject", $ccbody, $ccheaders);
             // echo json_encode(array("success" => TRUE));
         } else {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
         }
+    } elseif (strstr($err, "spam")) {
+        $spamlog = date('M d, Y   H:i:s')."   errors: $err\r\n
+                    Email from $name: $email with subject $subject\r\n
+                    $message\r\n
+                    ----------------------------------------------------------------------------------------------------\r\n\r\n";
+        file_put_contents("../../../spam.log", $spamlog, FILE_APPEND | LOCK_EX);
+        echo json_encode(array("success" => TRUE,"error" => $err)); 
     } else {
         echo json_encode(array("success" => FALSE,"error" => $err));
     }

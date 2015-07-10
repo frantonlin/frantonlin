@@ -31,12 +31,14 @@ function main() {
         message.addClass("error");
         message.focus();
         error = true;
-      } else if (message.val().indexOf('://')!==-1) {
-        message.addClass("linkerror");
-        message.focus();
-        $(".button #linkerror").show();
-        error = true;
-      } else {
+      } 
+      // else if (message.val().indexOf('://')!==-1) {
+      //   message.addClass("linkerror");
+      //   message.focus();
+      //   $(".button #linkerror").show();
+      //   error = true;
+      // } 
+      else {
         message.removeClass("error");
         message.removeClass("linkerror");
         $(".button #linkerror").hide();
