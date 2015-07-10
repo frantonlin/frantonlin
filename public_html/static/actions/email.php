@@ -7,7 +7,7 @@ if (isset($_POST['send'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = 'Franton Lin <franton.lin@students.olin.edu>'; 
+    $to = 'Franton Lin <contact@frantonlin.com>'; 
     
     $body = "Email from $name: $email\r\n\r\n$message";
     $headers = "From: Frantonlin.com <contact@frantonlin.com>\r\n"; 
@@ -35,7 +35,7 @@ if (isset($_POST['send'])) {
     // Check if subject has been entered
     if (!$subject) {
         $err .= "nosubject ";
-    } elseif (preg_match('/[\r\n]|Content-Type:|Bcc:|Cc:/i', $subject)) {
+    } elseif (preg_match('/[\r\n]|href|content-type:|bcc:|cc:/i', $subject)) {
         // Check if subject is trying to inject headers
         $err .= "spamsubject ";
     }
@@ -43,7 +43,7 @@ if (isset($_POST['send'])) {
     // Check if message has been entered
     if (!$message) {
         $err .= "nomessage ";
-    } elseif (preg_match('/[\r\n]|Content-Type:|Bcc:|Cc:/i', $message)) {
+    } elseif (preg_match('/href|content-type:|bcc:|cc:/i', $message)) {
         // Check if message is trying to inject headers
         $err .= "spammessage ";
     }
