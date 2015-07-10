@@ -159,7 +159,6 @@ function main() {
     Portfolio Isotope Filter
     ======================================*/
     $(window).load(function() {
-      alert("Page loaded");
       var $container = $('#lightbox');
       $container.isotope({
         filter: '*',
