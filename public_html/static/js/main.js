@@ -1,6 +1,7 @@
 function main() {
   (function () {
     'use strict';
+    var slider;
 
     $('a.page-scroll').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -16,7 +17,6 @@ function main() {
     });
 
     $("#send").click(function(e) {
-      $('.bxslider').redrawSlider();
       var name = $("input#name");
       var email = $("input#email");
       var subject = $("input#subject");
@@ -143,7 +143,7 @@ function main() {
     })
 
   	$(document).ready(function() {
-      $('.bxslider').bxSlider({
+      slider=$('.bxslider').bxSlider({
         mode: 'fade',
         auto: true,
         speed: 2500,
@@ -183,12 +183,13 @@ function main() {
         });
         return false;
       });
+      slider.redrawSlider();
     });
 
     $(window).onpageshow = function(e) {
       if (e.persisted) {
         alert("Page shown");
-        $('.bxslider').redrawSlider();
+        slider.redrawSlider();
       }
     };
 
