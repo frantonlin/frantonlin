@@ -90,19 +90,20 @@ function main() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",
               "background": "#FFCC00"});
+            $("button#send").prop('disabled', true);
           },
           success: function(data) {
             if(data.success){
               $(".button #error").hide();
               $(".button #success").show();
               $("button#send").html("Sent");
-              $("button#send").prop('disabled', true);
               // alert("Success!");
             } else {
               $(".button #error").show();
               $("button#send").html("Send");
               $("button#send").css({"color": "#5a5a5a",
                 "background": "#fff"});
+              $("button#send").prop('disabled', false);
               // alert(data.error);
             }
           },
@@ -111,6 +112,7 @@ function main() {
             $("button#send").html("Send");
             $("button#send").css({"color": "#5a5a5a",
               "background": "#fff"});
+            $("button#send").prop('disabled', false);
             // alert("The php is broken");
           }
         });
