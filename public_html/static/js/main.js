@@ -153,6 +153,8 @@ function main() {
         pager: false,
         captions: true
       });
+
+      $('.bxslider').redrawSlider();
     });
 
   	/*====================================
