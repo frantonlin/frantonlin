@@ -183,12 +183,13 @@ function main() {
       });    
     });
 
-    $(window).bind("pageshow", function(event) {
-      if (event.originalEvent.persisted) {
+    $(window).onpageshow = function(e) {
+      if (e.persisted) {
+        alert("Page shown");
         $('.bxslider').redrawSlider();
       }
-    });
-
+    };
+    
   }());
 
 }
