@@ -361,15 +361,21 @@ ol.type li a.active { font-weight: 700; }
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
+  	transition: all 0.4s ease;
+}
+.portfolio-item .hover-bg:hover .bg-image{
+	-webkit-filter: brightness(110%) contrast(105%);
+	opacity:0.9;
 }
 .hover-bg .hover-text {
 	position: absolute;
-	top:0;
+	bottom:0;
 	width:100%;
+	height:auto;
 	padding:4px 8px;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	color: #ffffff;
-	/*background: rgba(0, 0, 0, 0.55);*/
+	background: rgba(0, 0, 0, 0.55);
 	/*padding: 6px 10px;*/
     transition: all 0.4s ease;
 }
@@ -381,7 +387,8 @@ ol.type li a.active { font-weight: 700; }
 }
 .hover-bg .hover-text h4{
 	/*display:inline-block;*/
-	margin:0;
+	margin:0 0 0px 0;
+	/*padding:2px 0;*/
 	font-size: 14px;
 	/*transition: all 0.4s ease-in-out;*/
 /*	-webkit-transform: translateY(100%);
@@ -391,7 +398,10 @@ ol.type li a.active { font-weight: 700; }
 .hover-bg:hover .hover-text h4{
 	/*font-size:16px;*/
 }
-.hover-bg .hover-text>small{
+.hover-bg .hover-text>p {
+	margin:0;
+}
+.hover-bg .hover-text small {
 	display: inline-block;
 	line-height: 1;
 }
