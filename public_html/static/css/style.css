@@ -33,12 +33,14 @@ font-size: 18px;
 font-weight: 900;
 }
 h4{
-	text-transform: uppercase;
+	font-weight: 600;
+	/*padding-bottom:2px;*/
+	/*text-transform: uppercase;*/
 }
 h5{
-	text-transform: uppercase;
-	font-weight: 700;
-	line-height: 20px;
+	/*text-transform: uppercase;*/
+	/*font-weight: 700;*/
+	/*line-height: 20px;*/
 }
 p{
 	font-family: 'Open Sans', sans-serif;
@@ -352,59 +354,63 @@ ol.type li a.active { font-weight: 700; }
 	height: 260px;
 	overflow: hidden;
 	position: relative;
+}
+.portfolio-item .hover-bg .bg-image{
+	height: 260px;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
-
 .hover-bg .hover-text {
 	position: absolute;
-	text-align: center;
+	top:0;
+	width:100%;
+	padding:4px 8px;
 	margin: 0 auto;
 	color: #ffffff;
-	background: rgba(0, 0, 0, 0.66);
-	padding: 25% 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-    transition: all 0.5s;
-}
-.hover-bg .hover-text>h4{
-	opacity: 0;
-	-webkit-transform: translateY(100%);
-            transform: translateY(100%);
-            transition: all 0.3s;
-}
-.hover-bg:hover .hover-text>h4{
-	opacity: 1;
-    -webkit-backface-visibility:hidden;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-}
-.hover-bg .hover-text>i{
-	opacity: 0;
-	-webkit-transform: translateY(0);
-            transform: translateY(0);
-            transition: all 0.3s;
-}
-.hover-bg:hover .hover-text>i{
-	opacity: 1;
-    -webkit-backface-visibility:hidden;
-   -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+	/*background: rgba(0, 0, 0, 0.55);*/
+	/*padding: 6px 10px;*/
+    transition: all 0.4s ease;
 }
 .hover-bg:hover .hover-text{
-	opacity: 1;
+	/*min-height:100%;*/
+	/*min-width:100%;*/
+	/*-webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);*/
 }
-#tf-works i.fa {
-	height: 30px;
-	width: 30px;
-	border: 1px solid #FFCC00;
-	font-size: 20px;
-	padding: 5px;
-	border-radius: 50%;
-	color: #FFCC00;
+.hover-bg .hover-text h4{
+	/*display:inline-block;*/
+	margin:0;
+	font-size: 14px;
+	/*transition: all 0.4s ease-in-out;*/
+/*	-webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            transition: all 0.3s;*/
+}
+.hover-bg:hover .hover-text h4{
+	/*font-size:16px;*/
+}
+.hover-bg .hover-text>small{
+	display: inline-block;
+	line-height: 1;
+}
+.hover-bg .hover-text i{
+	position:relative;
+	opacity: 0;
+	top:-8px;
+	padding-right:0;
+	-webkit-transform: translateY(0);
+            transform: translateY(0);
+            transition: all 0.2s ease 0s;
+}
+.hover-bg:hover .hover-text i{
+	opacity: 1;
+	padding-right:10px;
+	transition: all 0.35s ease 0.15s;
+    -webkit-backface-visibility:hidden;
+/*   	-webkit-transform: translateX(100%);
+            transform: translateX(100%);*/
 }
 
 /* Contact Section */
