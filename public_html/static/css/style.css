@@ -373,10 +373,8 @@ ol.type li a.active { font-weight: 700; }
 	width:100%;
 	height:auto;
 	padding:4px 8px;
-	/*margin: 0 auto;*/
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.55);
-	/*padding: 6px 10px;*/
     transition: all 0.4s ease;
 }
 .hover-bg:hover .hover-text{
@@ -386,20 +384,8 @@ ol.type li a.active { font-weight: 700; }
             transform: translateY(40%);*/
 }
 .hover-bg .hover-text h4{
-	/*display:inline-block;*/
 	margin:0 0 0px 0;
-	/*padding:2px 0;*/
 	font-size: 14px;
-	/*transition: all 0.4s ease-in-out;*/
-/*	-webkit-transform: translateY(100%);
-            transform: translateY(100%);
-            transition: all 0.3s;*/
-}
-.hover-bg:hover .hover-text h4{
-	/*font-size:16px;*/
-}
-.hover-bg .hover-text>p {
-	margin:0;
 }
 .hover-bg .hover-text small {
 	display: block;
