@@ -158,6 +158,16 @@ function main() {
         captions: true
       });
 
+      $(".hover-bg").hover(function(e) { 
+        var move = $(this).find("small").height()+3;
+        $(this).find(".hover-text").css({"-webkit-transform":"translateY("+move+"px)",
+                                          "transform":"translateY("+move+"px)"}); 
+      }, function(e) {
+        var move = $(this).find("small").height()+3;
+        $(this).find(".hover-text").css({"-webkit-transform":"translateY(0)",
+                                          "transform":"translateY(0)"});
+      });
+
       // Email obfuscator script 2.1 by Tim Williams, University of Arizona
       // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
       // This code is freeware provided these four comment lines remain intact

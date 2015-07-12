@@ -35,7 +35,7 @@ font-weight: 900;
 h4{
 	font-weight: 600;
 	/*padding-bottom:2px;*/
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 }
 h5{
 	/*text-transform: uppercase;*/
@@ -382,8 +382,8 @@ ol.type li a.active { font-weight: 700; }
 .hover-bg:hover .hover-text{
 	/*min-height:100%;*/
 	/*min-width:100%;*/
-	/*-webkit-transform: translate(10px, -10px);
-            transform: translate(10px, -10px);*/
+	/*-webkit-transform: translateY(40%);
+            transform: translateY(40%);*/
 }
 .hover-bg .hover-text h4{
 	/*display:inline-block;*/
@@ -402,8 +402,9 @@ ol.type li a.active { font-weight: 700; }
 	margin:0;
 }
 .hover-bg .hover-text small {
-	display: inline-block;
+	display: block;
 	line-height: 1;
+	margin-top:3px;
 }
 .hover-bg .hover-text i{
 	position:relative;
