@@ -75,7 +75,6 @@ hr {
 
 #tf-menu {
     padding: 20px 0;
-    transition: all 0.8s;
 }
 #tf-menu.navbar-default {
     background-color: rgba(248, 248, 248, 0);
@@ -89,10 +88,6 @@ hr {
     font-weight: 900;
     opacity: 1;
     z-index: 0;
-    transition: all 0.8s;
-}
-#tf-menu .navbar-header {
-    transition: all 0.8s;
 }
 #tf-menu .avatar {
     position:absolute;
@@ -122,6 +117,7 @@ hr {
 }
 
 .navbar-toggle {
+    height:34px;
     border-radius: 0;
     padding: 9px 0;
     text-transform: uppercase;
