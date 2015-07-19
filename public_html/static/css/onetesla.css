@@ -1,0 +1,10 @@
+
+hr {
+  height:1px;
+  border:0;
+  margin:10px 0;
+  background:#F0A0F8;
+  /*background-image: -webkit-linear-gradient(left, #F6695E, #C3362B, #F6695E);*/
+  /*background-image: -webkit-linear-gradient(left, #FCC7C3, #FBB4AF, #FCC7C3);*/
+  background-image: -webkit-linear-gradient(left, #C582E6, #A26EF5, #C582E6);
+}
