@@ -1,0 +1,7 @@
+/* tall (mobile portrait) */
+@media (max-width: 493px) {
+    .fnav {
+        float: none !important;
+        text-align: center;
+    }
+}
