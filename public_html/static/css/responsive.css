@@ -41,12 +41,6 @@
     #tf-about .text {
         margin-left: 0;
     }
-    #tf-works li.pull-right, #tf-works li.pull-left {
-        margin-top: 10px;
-        float: none !important;
-        text-align: center;
-        display: block;
-    }
     #sliderbox {
         position:absolute !important;
     }

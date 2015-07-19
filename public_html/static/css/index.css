@@ -582,6 +582,7 @@ nav#footer{
 nav#footer .fnav{ vertical-align: middle;}
 ul.footer-social {
 	margin:0;
+	padding:0;
 }
 ul.footer-social li{
 	display: inline-block;

@@ -198,7 +198,8 @@ nav#footer{
 }
 nav#footer .fnav{ vertical-align: middle;}
 ul.footer-social {
-    margin:0;
+    margin:-3px 0 0 0;
+    padding:0;
 }
 ul.footer-social li{
     display: inline-block;
@@ -211,7 +212,7 @@ ul.footer-social li.last{
 }
 nav#footer p{
     font-size: 12px;
-    margin-top: 10px;
+    margin: 7px 0;
 }
 #footer i.fa {
     font-size: 22px;
