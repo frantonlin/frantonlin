@@ -77,81 +77,103 @@
     <div id="content">
         <div class="container">
             <div class="col-md-8 col-md-offset-2">
-                <h2>What is Kyzr?</h2>
-                <p>Kyzr is a virtual torch-passing application that aims to create a global interconnected community around the adventure of meeting like-minded travelers and watching a piece of your identity travel around the world.</p>
-                <br>
+                <div class="section">
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-12 vcenter">
+                            <img src="static/img/kyzr/logo.png" width="100%">
+                        </div>
+                        <!-- <h2>What is Kyzr?</h2> -->
+                        <div class="col-sm-8 vcenter">
+                            <p>A virtual torch-passing application that aims to create a global interconnected community around the adventure of meeting like-minded travelers and watching a piece of your identity travel around the world.</p>
+                        </div>
+                    </div>
+                </div>
                 <hr>
-                <br>
 
-                <h2>Our Story</h2>
-                <p>Our project is all about buzzwords. A full-stack implementation of an Android-interfacing application, with industrial grade database software and a software stack that represents how projects are done in the real world. From the beginning we wanted this project to be implemented like an actual application such as Twitter or Facebook. We also wanted to emulate how they do it, and we used (mostly) good git practices such as pull requests and branches, and used an Agile workflow using Trello.</p><br>
-                <p>Over time, our project evolved into something we actually cared about. As we continued development, we became more excited by the features that we could add. Through design reviews, we came up with ideas of adding features such as usernames and torch statistics. We also ideated a lot on the User Interface of both the website and the Android app. The combination of these features and updated UI turned the project from something that was simply a class project into something that we were really excited about.</p><br>
-                <p>Below is an early representation of our website UI:</p><br>
-                <img src="static/img/kyzr/early.png" style="width:90%;height:auto;position:relative;left:5%"/>
-                <br><br>
-                <p>After a lot of updating on the UI, our website now looks like this:</p><br>
-                <img src="static/img/kyzr/now.png" style="width:90%;height:auto;position:relative;left:5%" />
-
-                <br>
-                <br>
-                <br>
-                <p> As we became more excited, we began implementing more features, as seen through our git commits. The top graph represents the github repository associated with the Android app and the bottom graph represents our server.</p><br>
-                <img src="static/img/kyzr/github.png" style="width:100%;height:100%;" /><br>
-                <br>
+                <div class="section">
+                    <h2>Our Story</h2>
+                    <p><a href="https://www.linkedin.com/in/patrickhuston">Patrick</a>, <a href="https://www.linkedin.com/pub/byron-wasti/a4/b23/595">Byron</a>, <a href="https://www.linkedin.com/pub/andrew-deaver/a8/5bb/239">Andrew</a>, and I came together to work as a team for our final <a href="http://www.olin.edu/course-listing/engr2510-software-design/">Software Design</a> project. From the beginning we wanted our project to be implemented similarly to an actual application such as Twitter or Facebook. We aimed to create a full-stack implementation of an Android-interfacing application, with industrial grade database software and a software stack that represents how projects are done in the real world. We also wanted to emulate how they do it, and we used (mostly) good git practices such as pull requests and branches, and used an agile workflow with Trello. We split up the work, with Patrick and Andrew on the Android application and networking side of things, while Byron and I handled the server and website. At our meetings, we updated each other on progress and shared what we learned.</p><br>
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 image">
+                        <a href="static/img/kyzr/early.png">
+                            <div class="paper-shadow"><img src="static/img/kyzr/early.png" alt="Early Kyzr Website Screenshot"/></div>
+                        </a>
+                        <em>An early version of our website</em>
+                    </div></br>
+                    <p>Over time, our project evolved into something we really cared about. We became more excited by potential additional features as we continued development. Through design reviews, various ideas for features such as usernames and torch statistics popped up. These reviews were also helpful for ideating a lot on the user interface for the website and the Android app. The combination of these features and updated UI turned the project from something that was simply a class project into something that we were really excited about. Overall, we learned a lot from each other and created an awesome full-stack application.</p><br>
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 image">
+                        <a href="static/img/kyzr/now.png">
+                            <div class="paper-shadow"><img src="static/img/kyzr/now.png" alt="Updated Kyzr Website Screenshot"/></div>
+                        </a>
+                        <em>Our latest website design, after many updates</em>
+                    </div><br>
+                    <p> As we became more excited, we began implementing more features, as seen through our git commits.</p><br>
+                    <img src="static/img/kyzr/github.png" style="width:100%;height:100%;"/>
+                    <em>Top: Android app repository commits; Bottom: Server repository commits</em>
+                </div>
                 <hr>
-                <br>
 
-                <h2>How it Works</h2>
-                <h3>Implementation information</h3>
-                <p>1. Two NFC-equipped Android phones with Kyzr installed bump each other</p>
-                <p>2. User 1 taps their screen to swap torches with User 2</p>
-                <p>3. User 2’s phone now holds its original ID and User 1’s ID</p>
-                <p>4. User 2’s phone contacts the server, which tells the database that these two phones have switched IDs</p>
-                <p>5. The server also adds information to each user’s database entry about the transaction such as latitude and longitude</p>
-                <p>6. User 1 and 2 go to the website and enter their IDs (or usernames!)</p>
-                <p>7. The server retrieves all of their transactions from the database, and displays it on a map along with statistics about each user’s torch!</p>
-                <br>
-                <h3>On the Server Side</h3>
-                <p>Our server is a full-stack implementation of a LAMP server setup. We are running Debian 7, Apache server, Mongodb and python-Flask.</p>
-                <p>For mapping the travel of the torch we are using Google Maps API, with on-the-fly javascript creation.</p>
-                <p>Updating the database is done via POST requests.</p>
-                <br />
+                <div class="section">
+                    <h2>How it Works</h2>
+                    <h3>Implementation Information</h3>
+                    <ol type="1">
+                        <li>Two NFC-equipped Android phones with Kyzr installed bump each other</li>
+                        <li>User A taps their screen to swap torches with User B</li>
+                        <li>User B’s phone now holds its original ID and User A’s ID</li>
+                        <li>User B’s phone contacts the server, which tells the database that these two phones have switched IDs</li>
+                        <li>The server also adds information to each user’s database entry about the transaction such as latitude and longitude</li>
+                        <li>User A and B go to the website and enter their IDs (or usernames!)</li>
+                        <li>The server retrieves all of their transactions from the database, and displays it on a map along with statistics about each user’s torch!</li>
+                    </ol>
+                    <h3>On the Server Side</h3>
+                    <p>Our server was a full-stack implementation of a LAMP server setup, which ran Debian 7, Apache server, Mongodb and python-Flask.</p>
+                    <p>For mapping the travel of the torch we used Google Maps API, with on-the-fly javascript for specific queries.</p>
+                    <p style="margin:0;">Updating the database is done via POST requests.</p>
+                </div>
                 <hr>
-                <br>
 
-                <h2>Attributions and External Resources</h2>
-                <p>pyMongo</p>
-                <p>Mongodb</p>
-                <p>python-Flask</p>
-                <p>Apache2-server</p>
-                <p>Google maps API</p>
-                <p>Google styling (material)</P>
-                <p><a href="https://github.com/futuresimple/android-floating-action-button">Floating Action Button Library</a></p>
-                <p><a href="http://materializecss.com/">http://materializecss.com/</a></p>
-                <br />
+                <div class="section">
+                    <h2>Project Resources</h2>
+                    <h3>Repositories</h3>
+                    <a href="https://github.com/byronwasti/Kyzr-Server">
+                      Server GitHub</i> 
+                    </a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="https://github.com/phuston/kyzr">
+                        Android GitHub</i> 
+                    </a>
+                    <h3>Documents</h3>
+                    <a href="../static/KyzrProposal.pdf" target="newtab">The Project Proposal</a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="../static/design_review.pdf" target="newtab">Design Review Slides</a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="../static/code_review.pdf" target="newtab">Code Review Slides</a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="../static/poster.pdf" target="newtab">Final Presentation Poster</a>
+                    <br>
+                    <h3>Sprint Schedule</h3>
+                    <ul style="margin:0;">
+                      <li>Sprint 1 - 4/1</li>
+                      <li>Sprint 2 - 4/8</li>
+                      <li>Sprint 3 - 4/15</li>
+                      <li>Sprint 4 - 4/22</li>
+                      <li>Sprint 5 - 4/29</li>
+                    </ul>
+                </div>
                 <hr>
-                <br />
 
-
-                <h2>Class Resources</h2>
-                <h3>Documents</h3>
-                <a href="../static/KyzrProposal.pdf" target="newtab">The Project Proposal</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="../static/DesignReview1.pdf" target="newtab">Design Review 1</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="../static/DesignReviewFeedback.pdf" target="newtab">Design Review 1 Feedback</a>
-                <br>
-                <br>
-
-                <h3>Sprint Schedule</h3>
-                <ul>
-                  <li>Sprint 1 - 4/1</li>
-                  <li>Sprint 2 - 4/8</li>
-                  <li>Sprint 3 - 4/15</li>
-                  <li>Sprint 4 - 4/22</li>
-                  <li>Sprint 5 - 4/29</li>
-                </ul>
-                <a href="static/img/kyzr/poster.pdf" target="newtab">Our Final Poster!</a>
+                <div class-"section">
+                    <h2>External Resources</h2>
+                    <ul style="margin:0;">
+                        <li>pyMongo</li>
+                        <li>Mongodb</li>
+                        <li>python-Flask</li>
+                        <li>Apache2-server</li>
+                        <li>Google maps API</li>
+                        <li>Google styling</li>
+                        <li><a href="https://github.com/futuresimple/android-floating-action-button">Floating Action Button Library</a></li>
+                        <li><a href="http://materializecss.com/">Material Design</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
