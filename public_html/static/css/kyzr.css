@@ -123,18 +123,26 @@ hr {
 
 .navbar-toggle {
     border-radius: 0;
+    padding: 9px 0;
     text-transform: uppercase;
-    color:#888;
+    color: #FFF;
+    font-size: 12px;
     letter-spacing: 1px;
 }
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
     color:#fff;
-    background-color: #FFCC00;
-    border-color: #FFCC00;
+    background-color: transparent;
+    text-decoration: none;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
-    background-color: #FFF;
+    /*background-color: #FFF;*/
+}
+.navbar-toggle i {
+    position: absolute;
+    top: 4px;
+    left: -16px;
+    font-size: 26px;
 }
 
 /* Content */
