@@ -16,6 +16,12 @@ function main() {
       }
     });
 
+    window.setTimeout(function() {
+      if(location.hash.length !== 0) {
+        window.scrollTo(window.scrollX, window.scrollY - 40);
+      }
+    }, 1);
+
     $("#send").click(function(e) {
       var name = $("input#name");
       var email = $("input#email");
@@ -162,7 +168,8 @@ function main() {
         $(".hover-bg").hover(function(e) { 
           var move = $(this).find("small").height()+3;
           $(this).find(".hover-text").css({"-webkit-transform":"translateY(0)",
-                                            "transform":"translateY(0)"}); 
+                                            "transform":"translateY(0)",
+                                            "transition": "all 0.4s ease"}); 
         }, function(e) {
           var move = $(this).find("small").height()+3;
           $(this).find(".hover-text").css({"-webkit-transform":"translateY("+move+"px)",

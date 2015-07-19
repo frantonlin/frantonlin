@@ -66,13 +66,13 @@ a:focus{
 	clear: both;
 }
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
@@ -147,16 +147,16 @@ ul, ol{
 	text-transform: uppercase;
 	color:#888;
 	letter-spacing: 1px;
-	}
+}
 .navbar-default .navbar-toggle:hover, 
 .navbar-default .navbar-toggle:focus {
 	color:#fff;
 	background-color: #FFCC00;
 	border-color: #FFCC00;
-	}
+}
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
-	}
+}
 
 /* Home Style */
 #tf-about{
@@ -290,6 +290,13 @@ a.fa.fa-angle-down:hover{
 
 /* Portfolio Section 
 ==============================*/
+#tf-portfolio:before {
+	display: block; 
+	content: " "; 
+	margin-top: -40px; 
+	height: 40px; 
+	visibility: hidden;
+}
 #tf-portfolio{
 	position: relative;
 	padding: 2% 2%;
@@ -375,7 +382,7 @@ ol.type li a.active { font-weight: 700; }
 	padding:4px 8px;
 	color: #ffffff;
 	background: rgba(0, 0, 0, 0.55);
-    transition: all 0.4s ease;
+    /*transition: all 0.4s ease;*/
 }
 .hover-bg:hover .hover-text{
 	/*min-height:100%;*/

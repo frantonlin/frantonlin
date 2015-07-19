@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+
+#header {
+  background-color:#F44336;
+  color:black;
+  margin-top:-140px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-left: 5%;
+  padding-top: 1rem;
+}
+
+#content {
+  position:relative;
+  height:100%;
+  margin: 40px 20%;
+}
+
+#footer {
+  position:absolute;
+  background-color:#F44336;
+  color:#1A1A1A;
+  text-align:center;
+  padding:4px;
+  margin-bottom:0px;
+  height:30px;
+  width:100%;
+  bottom:0;
+  left:0;
+  font-size:16px;
+}
+
+#footer img {
+  position:relative;
+  top:2px;
+  height:15px;
+  width:auto;
+}
+
+#footer a {
+  font-weight: normal;
+  color:#1A1A1A;
+  font-size:14px;
+}
+#footer a:link {
+}
+#footer a:visited {
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer a:active {
+  text-decoration: underline;
+}
+
+.jumbotron {
+  position:relative;
+  padding-top:140px;
+  padding-bottom:25px;
+  min-height:100%;
+  font-size:16px;
+}
+
+.jumbotron h1 {
+  color: #373737;
+  font-size: 42px;  
+  font-weight: normal;
+}
+
+.jumbotron h2 {
+  color: #373737;
+  font-size: 34px;  
+  font-weight: normal;
+  margin:0;
+}
+
+.jumbotron h3 {
+  color: #434343;
+  font-size: 18px;  
+  font-weight: bold;
+  margin:0;
+}
+
+.jumbotron p {
+  color: #434343;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.jumbotron hr {
+  height:1px;
+  border:0;
+  margin-top:10px;
+  background:#FBB4AF;
+  /*background-image: -webkit-linear-gradient(left, #F6695E, #C3362B, #F6695E);*/
+  /*background-image: -webkit-linear-gradient(left, #FCC7C3, #FBB4AF, #FCC7C3);*/
+  background-image: -webkit-linear-gradient(left, #FAA59E, #F6695E, #FAA59E);
+}
+
+.jumbotron a {
+  color:#176399;
+  font-size: 16px;
+}
+.jumbotron a:link {
+}
+.jumbotron a:visited {
+}
+.jumbotron a:hover {
+  text-decoration: underline;
+}
+.jumbotron a:active {
+  text-decoration: underline;
+}
+
+.jumbotron img {
+   height: 112px;
+   width: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
