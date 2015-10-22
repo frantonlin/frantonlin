@@ -6,8 +6,8 @@ function email() {
       // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
       // This code is freeware provided these four comment lines remain intact
       // A wizard to generate this code is at http://www.jottings.com/obfuscator/
-      var coded = "V2icOVc@QhOic2iFBi.V2Z",
-      key = "2nx4rYaH07QdvjtWeFNX6mqiG3hAOSwRKybkcE9TospZLBJDu8fIUCz15lVgMP",
+      var coded = "2tRufAu.r1u@9fKmNuf9.Ar1u.NmK",
+      key = "WnioqQMHRgd57Ep6Y02w9NtZVklvzBu1AxF4SyOmhaXC83IGbcLfjserPJTKUD",
       shift=coded.length,
       link="";
       for (var i=0; i<coded.length; i++) {
