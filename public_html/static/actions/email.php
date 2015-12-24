@@ -7,14 +7,14 @@ if (isset($_POST['send'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = 'Franton Lin <contact@frantonlin.com>'; 
+    $to = 'Franton Lin <flin@frantonlin.com>'; 
     
     $body = "Email from $name: $email\r\n\r\n$message";
-    $headers = "From: Frantonlin.com <contact@frantonlin.com>\r\n"; 
+    $headers = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
     $headers .= "Reply-To: $email"; 
 
     $ccbody = "This is a copy of your message to Franton Lin.\r\n\r\n$message";
-    $ccheaders = "From: Frantonlin.com <contact@frantonlin.com>\r\n"; 
+    $ccheaders = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
     $ccheaders .= "Reply-To: $to"; 
 
     $err = "";
@@ -55,14 +55,18 @@ if (isset($_POST['send'])) {
     // If there are no errors, send the email
     if (!$err) {
         if (mail($to, $subject, $body, $headers)) {
-            mail($email,"Copy: $subject", $ccbody, $ccheaders);
+            // mail($email,"Copy: $subject", $ccbody, $ccheaders);
             echo json_encode(array("success" => TRUE));
         } else {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
         }
+        $entry = date('M d, Y   H:i:s')."   errors: $err\nEmail from $name: $email with subject $subject\n$message\n------------------------------------------------------------------------------------------------------------------------------------------------------\n\n";
+        $log = fopen("/var/www/frantonlin.com/contact.log", "a");
+        fwrite($log, $entry);
+        fclose($log);
     } elseif (strstr($err, "spam")) {
         $spamentry = date('M d, Y   H:i:s')."   errors: $err\nEmail from $name: $email with subject $subject\n$message\n------------------------------------------------------------------------------------------------------------------------------------------------------\n\n";
-        $spamlog = fopen("/var/www/frantonlin.com/spam.log", "a");
+        $spamlog = fopen("/var/www/frantonlin.com/contact.spam.log", "a");
         fwrite($spamlog, $spamentry);
         fclose($spamlog);
         echo json_encode(array("success" => TRUE,"error" => $err)); 
