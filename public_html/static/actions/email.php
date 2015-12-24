@@ -7,15 +7,16 @@ if (isset($_POST['send'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = 'Franton Lin <flin@frantonlin.com>'; 
+    $to = 'Franton Lin <franton.lin@students.olin.edu>'; 
     
-    $body = "Email from $name: $email\r\n\r\n$message";
+    $body = "$message";
     $headers = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
-    $headers .= "Reply-To: $email"; 
+    $headers .= "Reply-To: $name <$email>\r\n";
+    $headers .= "CC: $name <$email>\r\n"; 
 
-    $ccbody = "This is a copy of your message to Franton Lin.\r\n\r\n$message";
-    $ccheaders = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
-    $ccheaders .= "Reply-To: $to"; 
+    // $ccbody = "This is a copy of your message to Franton Lin.\r\n\r\n$message";
+    // $ccheaders = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
+    // $ccheaders .= "Reply-To: $name <$to>"; 
 
     $err = "";
 
@@ -55,7 +56,7 @@ if (isset($_POST['send'])) {
     // If there are no errors, send the email
     if (!$err) {
         if (mail($to, $subject, $body, $headers, "-f flin@frantonlin.com")) {
-            mail($email,"Copy: $subject", $ccbody, $ccheaders, "-f flin@frantonlin.com");
+            // mail($email,"Copy: $subject", $ccbody, $ccheaders, "-f flin@frantonlin.com");
             echo json_encode(array("success" => TRUE));
         } else {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
