@@ -7,7 +7,7 @@ if (isset($_POST['send'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = 'Franton Lin <flin@frantonlin.com>'; 
+    $to = 'Frantonlin.com <flin@frantonlin.com>'; 
     
     $body = "Email from $name: $email\r\n\r\n$message";
     $headers = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
