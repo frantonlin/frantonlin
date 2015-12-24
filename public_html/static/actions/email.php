@@ -7,7 +7,7 @@ if (isset($_POST['send'])) {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $to = 'Frantonlin.com <flin@frantonlin.com>'; 
+    $to = 'Franton Lin <flin@frantonlin.com>'; 
     
     $body = "Email from $name: $email\r\n\r\n$message";
     $headers = "From: Frantonlin.com <flin@frantonlin.com>\r\n"; 
@@ -54,8 +54,8 @@ if (isset($_POST['send'])) {
  
     // If there are no errors, send the email
     if (!$err) {
-        if (mail($to, $subject, $body, $headers)) {
-            // mail($email,"Copy: $subject", $ccbody, $ccheaders);
+        if (mail($to, $subject, $body, $headers, "-f flin@frantonlin.com")) {
+            mail($email,"Copy: $subject", $ccbody, $ccheaders, "-f flin@frantonlin.com");
             echo json_encode(array("success" => TRUE));
         } else {
             echo json_encode(array("success" => FALSE,"error" => "mail() error")); 
