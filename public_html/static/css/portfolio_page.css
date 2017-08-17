@@ -173,9 +173,9 @@ hr {
     z-index: -1;
 }
 #content .paper-shadow{
-    -webkit-box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.05);
-    box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.04);
+    -moz-box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.04);
+    box-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.1), inset 0 0 40px rgba(0, 0, 0, 0.04);
 }
 #content .video-wrapper {
     position: relative;
