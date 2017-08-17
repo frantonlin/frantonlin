@@ -156,6 +156,12 @@ hr {
 #content .container {
     padding:3% 0 0;
 }
+#content .row .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-right:-4px;
+}
 #content .image-wrapper {
     float:none;
     padding:0;

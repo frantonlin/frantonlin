@@ -1,24 +1,9 @@
-
-hr {
-  background:#FBB4AF;
-  /*background-image: -webkit-linear-gradient(left, #F6695E, #C3362B, #F6695E);*/
-  /*background-image: -webkit-linear-gradient(left, #FCC7C3, #FBB4AF, #FCC7C3);*/
-  background-image: -webkit-linear-gradient(left, #FAA59E, #F6695E, #FAA59E);
-}
-
 #content .row img {
     background-color: #F44336;
     padding:10px;
 }
 #content .row p {
     margin:0;
-}
-
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-right:-4px;
 }
 
 /* tall (mobile portrait) */
