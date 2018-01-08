@@ -342,14 +342,14 @@
                 <em>Feel free to drop me a line for whatever reason.</em>
             </div>
 
-            <form role="form" id="contact-form" action="static/actions/email.php" method="POST">
+            <form role="form" id="contact-form" action="javascript-not-enabled">
                 <div class="form-group half-left">
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Name">
+                    <input type="text" id="name" placeholder="Name" name="name">
                 </div>
                 <div class="form-group half-right">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Email">
+                    <input type="email" id="email" placeholder="Email" name="_replyto">
                 </div>
                 <div class="form-group" style="clear:both;">
                     <label for="subject">Subject</label>
@@ -357,14 +357,16 @@
                 </div>
                 <div class="form-group text-area">
                     <label for="message">Message</label>
-                    <textarea id="message" rows="3" placeholder="Message"></textarea>
+                    <textarea id="message" rows="3" placeholder="Message" name="message"></textarea>
                 </div>
+
+                <input type="text" name="_gotcha" style="display:none" />
 
                 <div class="button">
                     <div id="success" style="display:none;">Message sent!</div>
                     <div id="error" style="display:none;">Something went wrong...</div>
                     <div id="linkerror" style="display:none;">Please remove links</div>
-                    <button id="send" type="submit" value="submit" name="submit">Send</button>
+                    <button id="send" type="submit" value="Send">Send</button>
                 </div>
             </form>
         </div>

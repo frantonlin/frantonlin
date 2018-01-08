@@ -22,7 +22,9 @@ function main() {
       }
     }, 1);
 
-    $("#send").click(function(e) {
+    $("#contact-form").submit(function(e) {
+      e.preventDefault();
+
       var name = $("input#name");
       var email = $("input#email");
       var subject = $("input#subject");
@@ -82,16 +84,13 @@ function main() {
       //   '\nmessage:'+$("textarea#message").val());
 
       if(!error) {
+        var data = $(this).serialize()+
+                   '&_subject=frantonlin.com:+'+encodeURIComponent($("input#subject").val());
         $.ajax({
-          type: $("#contact-form").attr("method"),
-          url: "../../" + $("#contact-form").attr("action"),
+          url: $("#contact-form").attr("action"),
+          method: "POST",
           dataType: "json",
-          data:
-            'send=send'+
-            '&name='+$("input#name").val()+
-            '&email='+$("input#email").val()+
-            '&subject='+$("input#subject").val()+
-            '&message='+$("textarea#message").val(),
+          data: data,
           beforeSend: function() {
             $("button#send").html("Sending");
             $("button#send").css({"color": "#fff",

@@ -19,10 +19,12 @@ function email() {
           link += (key.charAt(ltr));
         }
       }
-      var emailLinks = document.getElementsByClassName("my-email")
+      var emailLinks = document.getElementsByClassName("my-email");
       for (var i=0; i<emailLinks.length; i++) {
         emailLinks[i].href = "mailto:"+link;
       }
+      var contactForm = document.getElementById("contact-form");
+      contactForm.action = "https://formspree.io/"+link;
     });
 
   }());
